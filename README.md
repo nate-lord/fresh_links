@@ -23,3 +23,5 @@ The posts can be saved or deleted.
 This project is built with [WordPress](https://wordpress.org) and uses the [Advanced Custom Fields](http://www.advancedcustomfields.com) and [wp category meta](https://wordpress.org/plugins/wp-category-meta/) plugins.
 
 HTML scrubbing is done with [Readability](https://bitbucket.org/fivefilters/php-readability/overview).
+
+RSS retrieval is done with the [Google Feed API](https://developers.google.com/feed/).
