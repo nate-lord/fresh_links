@@ -17,3 +17,7 @@ A first time user:
 New posts will appear. The user will then click each post to reveal the contents.
 
 The posts can be saved or deleted.
+
+## Credits
+
+This project is built with [WordPress](https://wordpress.org) and uses the [Advanced Custom Fields](http://www.advancedcustomfields.com) and [wp category meta](https://wordpress.org/plugins/wp-category-meta/) plugins.
