@@ -1,28 +1,3 @@
-/*
-
-
-
-
-
-
-
-
-prob in the canvas wrapping function:
-F.showInsertedPost is called multiple times (once per iframe).
-when this happens the post opens then closes.
-this is also a general bug to watch out for.
-you saved a error case in the saved section.
-
-
-
-
-
-
-
-
-*/
-
-
 $(function() {
 	var C, 	// alais for FRESH_LINKS.config
 			$El,		// alais for FRESH_LINKS.cachedElements
