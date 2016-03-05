@@ -1,0 +1,2892 @@
+@charset "UTF-8";
+/*
+Theme Name: fresh links
+Theme URI: http://onkybonk.com
+Author: Nate Lord
+Author URI: http://onkybonk.com
+Description: fresh links' theme
+Version: 1.0
+License: Attribution-NonCommercial-NoDerivs CC BY-NC-ND
+License URI: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+Tags: nah
+Text Domain: fresh links
+
+Exploder WordPress Theme © 2014 Nathaniel Lord
+*/
+/**
+* resets the styles to totally plain.
+* excludes forms.
+*/
+/* line 5, ../sass/custom-reset.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+a {
+  background: transparent;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+a:active, a:hover, a:visited, a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+b, h1, h2, h3, h4, h5, h6, strong {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+i, em, dfn, var, cite, address {
+  font-style: normal;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+tt, kbd, pre, code, samp {
+  font-family: sans-serif;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+mark {
+  background: inherit;
+  color: inherit;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+small {
+  font-size: 1em;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+sub, sup {
+  font-size: 1em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+sup {
+  top: auto;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+sub {
+  bottom: auto;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+img {
+  border: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+audio, canvas, img, svg, video {
+  vertical-align: middle;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+button {
+  overflow: visible;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+button, select {
+  text-transform: none;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+input {
+  line-height: normal;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+optgroup {
+  font-weight: normal;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+td, th {
+  padding: 0;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 5, ../sass/custom-reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1em;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 3, ../sass/form-reset.sass */
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 7, ../sass/form-reset.sass */
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  outline: 0;
+  vertical-align: middle;
+}
+
+/* line 15, ../sass/form-reset.sass */
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 1em;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+}
+
+/* line 30, ../sass/form-reset.sass */
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1em;
+  height: 1.8em;
+}
+
+/* line 57, ../sass/form-reset.sass */
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* line 69, ../sass/form-reset.sass */
+:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 75, ../sass/form-reset.sass */
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  /* line 82, ../sass/form-reset.sass */
+  select,
+  select[size="0"],
+  select[size="1"] {
+    height: 1.8em;
+  }
+}
+/* line 87, ../sass/form-reset.sass */
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: none;
+  width: 100%;
+}
+
+/* line 93, ../sass/form-reset.sass */
+optgroup {
+  font-style: normal;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+/* line 99, ../sass/form-reset.sass */
+textarea,
+input {
+  outline: none;
+}
+
+/* line 103, ../sass/form-reset.sass */
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+@font-face {
+  font-family: 'Acid-Italic';
+  src: url("../../fonts/acid_italic-webfont-webfont.eot");
+  src: url("../../fonts/acid_italic-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/acid_italic-webfont-webfont.woff") format("woff"), url("../../fonts/acid_italic-webfont-webfont.ttf") format("truetype"), url("../../fonts/acid_italic-webfont-webfont.svg#aciditalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Black';
+  src: url("../../fonts/Gotham-Black.eot");
+  src: url("../../fonts/Gotham-Black.eot#iefix"), url("../../fonts/Gotham-Black.woff") format("woff"), url("../../fonts/Gotham-Black.ttf") format("truetype"), url("../../fonts/Gotham-Black.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-BlackItalic';
+  src: url("../../fonts/Gotham-BlackItalic.eot");
+  src: url("../../fonts/Gotham-BlackItalic.eot#iefix"), url("../../fonts/Gotham-BlackItalic.woff") format("woff"), url("../../fonts/Gotham-BlackItalic.ttf") format("truetype"), url("../../fonts/Gotham-BlackItalic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url("../../fonts/Gotham-Book.eot");
+  src: url("../../fonts/Gotham-Book.eot#iefix"), url("../../fonts/Gotham-Book.woff") format("woff"), url("../../fonts/Gotham-Book.ttf") format("truetype"), url("../../fonts/Gotham-Book.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-BookItalic';
+  src: url("../../fonts/Gotham-BookItalic.eot");
+  src: url("../../fonts/Gotham-BookItalic.eot#iefix"), url("../../fonts/Gotham-BookItalic.woff") format("woff"), url("../../fonts/Gotham-BookItalic.ttf") format("truetype"), url("../../fonts/Gotham-BookItalic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url("../../fonts/Gotham-Bold.eot");
+  src: url("../../fonts/Gotham-Bold.eot#iefix"), url("../../fonts/Gotham-Bold.woff") format("woff"), url("../../fonts/Gotham-Bold.ttf") format("truetype"), url("../../fonts/Gotham-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Ultra';
+  src: url("../../fonts/Gotham-Ultra.eot");
+  src: url("../../fonts/Gotham-Ultra.eot#iefix"), url("../../fonts/Gotham-Ultra.woff") format("woff"), url("../../fonts/Gotham-Ultra.ttf") format("truetype"), url("../../fonts/Gotham-Ultra.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-UltraItalic';
+  src: url("../../fonts/Gotham-UltraItalic.eot");
+  src: url("../../fonts/Gotham-UltraItalic.eot#iefix"), url("../../fonts/Gotham-UltraItalic.woff") format("woff"), url("../../fonts/Gotham-UltraItalic.ttf") format("truetype"), url("../../fonts/Gotham-UltraItalic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+*
+*
+* style for the scrollbar plugin
+* http://manos.malihu.gr/jquery-custom-content-scroller/
+*/
+/* 
+------------------------------------------------------------------------------------------------------------------------
+BASIC STYLE  
+------------------------------------------------------------------------------------------------------------------------
+*/
+/* line 14, ../sass/scrollBar.scss */
+.mCustomScrollbar {
+  -ms-touch-action: none;
+  touch-action: none;
+  /* MSPointer events - direct all pointer events to js */
+}
+
+/* line 15, ../sass/scrollBar.scss */
+.mCustomScrollbar.mCS_no_scrollbar {
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
+
+/* line 17, ../sass/scrollBar.scss */
+.mCustomScrollBox {
+  /* contains plugin's markup */
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+  outline: none;
+  direction: ltr;
+}
+
+/* line 26, ../sass/scrollBar.scss */
+.mCSB_container {
+  /* contains the original content */
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+VERTICAL SCROLLBAR 
+y-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+/* line 41, ../sass/scrollBar.scss */
+.mCSB_inside > .mCSB_container {
+  margin-right: 20px;
+}
+
+/* line 43, ../sass/scrollBar.scss */
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+}
+
+/* non-visible scrollbar */
+/* line 45, ../sass/scrollBar.scss */
+.mCSB_scrollTools {
+  /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+  position: absolute;
+  width: 20px;
+  height: auto;
+  left: auto;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+}
+
+/* line 55, ../sass/scrollBar.scss */
+.mCSB_outside + .mCSB_scrollTools {
+  right: -26px;
+}
+
+/* scrollbar position: outside */
+/* line 58, ../sass/scrollBar.scss */
+.mCSB_scrollTools .mCSB_draggerContainer {
+  /* contains the draggable element and dragger rail markup */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+}
+
+/* line 67, ../sass/scrollBar.scss */
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+  margin: 20px 0;
+}
+
+/* line 71, ../sass/scrollBar.scss */
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 20px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 78, ../sass/scrollBar.scss */
+.mCSB_scrollTools .mCSB_dragger {
+  /* the draggable element */
+  cursor: pointer;
+  width: 100%;
+  height: 80px;
+  /* minimum dragger height */
+  z-index: 1;
+}
+
+/* line 85, ../sass/scrollBar.scss */
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  /* the dragger element */
+  position: relative;
+  width: 20px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+TRANSITIONS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+/* line 105, ../sass/scrollBar.scss */
+.mCSB_scrollTools,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight {
+  transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+/* 
+----------------------------------------
+THEME
+----------------------------------------
+*/
+/* default theme ("light") */
+/* line 127, ../sass/scrollBar.scss */
+.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
+  opacity: 0;
+}
+
+/* line 136, ../sass/scrollBar.scss */
+.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollBox:hover > .mCSB_scrollTools,
+.mCustomScrollBox:hover ~ .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools {
+  opacity: 1;
+}
+
+/* line 144, ../sass/scrollBar.scss */
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-image: url(../../style-imgs/scrollBar.svg);
+}
+
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+/*
+*
+* all elems
+*/
+/* line 20, ../sass/global-desktop.scss */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* line 25, ../sass/global-desktop.scss */
+*:after,
+*:before {
+  content: '';
+  position: absolute;
+}
+
+/*
+
+to fix jumpy text on transforms, add 
+-webkit-transform: translateZ(0) on parent of transformed elem.
+won't be perfect but you tried all the combos.
+*/
+/*
+*
+* sectioning elems
+*/
+/* line 43, ../sass/global-desktop.scss */
+body {
+  font: 16px / 24px 'Gotham-Book', sans-serif;
+  font: 1.6rem / 2.4rem 'Gotham-Book', sans-serif;
+  color: #1a1a1a;
+  height: 100%;
+  transition-duration: 0.5s;
+  transition-property: font-size, line-height;
+}
+
+/* line 54, ../sass/global-desktop.scss */
+h1 {
+  font: 36px / 41px 'Gotham-Black', sans-serif;
+  font: 3.6rem / 4.1rem 'Gotham-Black', sans-serif;
+  color: #333;
+  transition-duration: 0.5s;
+  transition-property: font-size, line-height;
+}
+
+/* line 63, ../sass/global-desktop.scss */
+hr:before {
+  left: 29px;
+  width: 12px;
+  height: 12px;
+  background: #333;
+  border-radius: 6px;
+}
+
+/* line 71, ../sass/global-desktop.scss */
+hr {
+  width: 12px;
+  width: 1.2rem;
+  height: 12px;
+  height: 1.2rem;
+  background: #333;
+  border: 0px;
+  border-radius: 6px;
+  margin: 0;
+  position: relative;
+}
+
+/* line 83, ../sass/global-desktop.scss */
+hr:after {
+  left: 58px;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+/* line 92, ../sass/global-desktop.scss */
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+/*
+*
+*  form elems
+*/
+/* line 102, ../sass/global-desktop.scss */
+label {
+  display: block;
+}
+
+/* line 106, ../sass/global-desktop.scss */
+:-ms-input-placeholder {
+  color: #00ddff;
+}
+
+/* line 110, ../sass/global-desktop.scss */
+:-moz-placeholder {
+  color: #00ddff;
+}
+
+/* line 114, ../sass/global-desktop.scss */
+::-moz-placeholder {
+  color: #00ddff;
+  opacity: 1;
+}
+
+/* line 119, ../sass/global-desktop.scss */
+::-webkit-input-placeholder {
+  color: #00ddff;
+}
+
+/*
+*
+* interactive tag elems
+*/
+/* line 129, ../sass/global-desktop.scss */
+.inlineButton,
+a[href]:not(.button) {
+  font-family: Gotham-Bold, sans-serif;
+  color: #00ddff;
+  transition: border-bottom-color 400ms linear, background-color 200ms linear;
+  border-bottom: 2px solid transparent;
+  border-bottom: 0.2rem solid transparent;
+}
+
+/* line 139, ../sass/global-desktop.scss */
+a:hover,
+.inlineButton:hover {
+  cursor: pointer;
+}
+
+/* line 143, ../sass/global-desktop.scss */
+.inlineButton:hover,
+a[href]:not(.button):hover {
+  border-bottom-color: #00ddff;
+}
+
+/* line 148, ../sass/global-desktop.scss */
+.inlineButton:active,
+a[href]:not(.button):active {
+  background-color: #00ddff;
+}
+
+/* line 159, ../sass/global-desktop.scss */
+input:not([type]),
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="password"] {
+  height: 25px;
+  height: 2.5rem;
+  padding: 2px 0 0 2px;
+  padding: 0.2rem 0 0 0.2rem;
+  border-left: 0.3rem solid #e0e0e0;
+  border-top: 0.3rem solid #f2f2f2;
+  box-shadow: inset -1px -1px #f4f4f4;
+  box-sizing: content-box;
+  transition-duration: 0.5s;
+  transition-property: padding, height;
+}
+
+/* line 177, ../sass/global-desktop.scss */
+button:before,
+.button:before,
+input[type="reset"]:before,
+input[type="button"]:before,
+input[type="submit"]:before {
+  border-bottom: 3px solid #fafafa;
+  border-right: 3px solid transparent;
+  bottom: -3px;
+  left: 0;
+}
+
+/* line 187, ../sass/global-desktop.scss */
+input,
+button,
+.button,
+input[type] {
+  color: #00ddff;
+  color: #00e1ff;
+  font: 18px/29px "Gotham-Black";
+  font: 1.8rem/2.9rem "Gotham-Black";
+  background: #fafafa;
+  transition-duration: 0.5s;
+  transition-property: font-size, line-height;
+}
+
+/* line 202, ../sass/global-desktop.scss */
+button,
+.button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  backface-visibility: hidden;
+  border-bottom: 3px solid #f2f2f2;
+  border-bottom: 0.3rem solid #f2f2f2;
+  border-right: 3px solid #e0e0e0;
+  border-right: 0.3rem solid #e0e0e0;
+  box-shadow: inset 1px 1px 0px 1px #f4f4f4;
+  box-sizing: border-box;
+  display: block;
+  height: 30px;
+  height: 3rem;
+  line-height: 30px;
+  line-height: 3rem;
+  padding: 3px 10px;
+  padding: 0.3px 1rem;
+  text-align: right;
+  transform: translate(0, 0) translateZ(0);
+  transition: background-color 0.5ms linear, transform 0.1s, height 0.5s, line-height 0.5s, padding 0.5s;
+}
+
+/* line 231, ../sass/global-desktop.scss */
+button:after,
+.button:after,
+input[type="reset"]:after,
+input[type="button"]:after,
+input[type="submit"]:after {
+  border-top: 3px solid #fafafa;
+  border-left: 3px solid transparent;
+  right: -3px;
+  top: 0;
+}
+
+/* line 239, ../sass/global-desktop.scss */
+body:not(#foo) input[type='radio'],
+body:not(#foo) input[type='checkbox'] {
+  opacity: 0;
+  width: 17px;
+}
+
+/* line 246, ../sass/global-desktop.scss */
+.button {
+  color: #00ddff !important;
+}
+
+/* line 251, ../sass/global-desktop.scss */
+.buttonWrap {
+  box-shadow: 3px 3px 0 -2px white;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 259, ../sass/global-desktop.scss */
+.buttonWrap:hover > * {
+  transform: translate(5px, 5px);
+  transform: translate(0.5rem, 0.5rem);
+}
+
+/* line 264, ../sass/global-desktop.scss */
+.no-csstransforms .buttonWrap:hover > * {
+  top: 5px;
+  left: 5px;
+}
+
+/* line 269, ../sass/global-desktop.scss */
+.currentMainSection {
+  padding: 10px 5px 0 5px;
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+
+/* line 275, ../sass/global-desktop.scss */
+.error {
+  color: #ff0096;
+  font: 15px "Acid-Italic";
+  font: 1.5rem "Acid-Italic";
+  height: 0;
+  line-height: 0;
+  margin: 0 !important;
+  opacity: 0;
+  position: relative;
+  text-shadow: 0 0 0.2rem rgba(250, 0, 150, 0.7);
+  top: 7px;
+  top: -0.7rem;
+  transition: font-size 0.5s;
+}
+
+/* line 293, ../sass/global-desktop.scss */
+.ir {
+  font: 0/0 a;
+  color: transparent;
+  display: block;
+}
+
+/* line 299, ../sass/global-desktop.scss */
+.info {
+  margin: 0 0 0.8rem 0.2rem;
+  margin: 0 0 8px 2px;
+}
+
+/* line 305, ../sass/global-desktop.scss */
+.info,
+.info .inlineButton {
+  font: 18px "Acid-Italic";
+  font: 1.8rem "Acid-Italic";
+}
+
+/* line 311, ../sass/global-desktop.scss */
+.info .inlineButton {
+  color: #00deff;
+  border-bottom: 1px solid rgba(0, 222, 255, 0);
+}
+
+/* line 316, ../sass/global-desktop.scss */
+.no-rgba .info .inlineButton {
+  border-bottom: 1px solid transparent;
+}
+
+/* line 320, ../sass/global-desktop.scss */
+.csstransitions .info .inlineButton:hover {
+  border-bottom-color: rgba(0, 222, 255, 0.5);
+}
+
+/* line 324, ../sass/global-desktop.scss */
+.no-csstransitions .info .inlineButton:hover {
+  border-bottom-color: #00deff;
+}
+
+/* line 328, ../sass/global-desktop.scss */
+.info .inlineButton:active {
+  background-color: #00deff;
+}
+
+/* line 336, ../sass/global-desktop.scss */
+.preload * {
+  /*  prevents the transitions from running on page load  */
+  transition: none !important;
+}
+
+/* line 341, ../sass/global-desktop.scss */
+.toTop {
+  width: 100%;
+  background: #fafafa;
+  height: 80px;
+  height: 8rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0 20px;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* line 354, ../sass/global-desktop.scss */
+.toTop > .toTopButton {
+  position: absolute;
+  left: 10px;
+  left: 1rem;
+  right: 10px;
+  right: 1rem;
+  height: 39px;
+  height: 3.9rem;
+  border: none !important;
+}
+
+/* line 368, ../sass/global-desktop.scss */
+.toTop > .toTopButton:hover {
+  cursor: pointer;
+}
+
+/* line 373, ../sass/global-desktop.scss */
+.toTopButton > .link,
+.toTopButton > .hover {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 380, ../sass/global-desktop.scss */
+.toTop > .toTopButton:hover > .hover {
+  opacity: 1;
+}
+
+/* line 384, ../sass/global-desktop.scss */
+.toTopButton > .hover {
+  opacity: 0;
+  transition: opacity 400ms linear;
+}
+
+/* line 390, ../sass/global-desktop.scss */
+.svg .toTopButton > .hover {
+  background: url(../../style-imgs/toTopLargeBlue.svg);
+}
+
+/* line 394, ../sass/global-desktop.scss */
+.no-svg .toTopButton > .hover {
+  background: url(../../style-imgs/toTopLargeBlue.png);
+}
+
+/* line 398, ../sass/global-desktop.scss */
+.svg .toTopButton > .link {
+  background: url(../../style-imgs/toTopLarge.svg);
+}
+
+/* line 402, ../sass/global-desktop.scss */
+.no-svg .toTopButton > .link {
+  background: url(../../style-imgs/toTopLarge.png);
+}
+
+/* line 407, ../sass/global-desktop.scss */
+body:not(#foo) input[type='checkbox'] + .style,
+body:not(#foo) input[type='checkbox']:checked + .style {
+  background-position: left center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  left: -13px;
+  left: -1.3rem;
+  margin: 0;
+  padding: 0 0 0 15px;
+  padding: 0 0 0 1.5rem;
+  position: relative;
+  top: -1px;
+  top: -0.1rem;
+  transition-duration: 0.5s;
+  transition-property: left, padding;
+}
+
+/* line 424, ../sass/global-desktop.scss */
+.svg:not(#foo) input[type='checkbox'] + .style {
+  background-image: url(../../style-imgs/unchecked.svg);
+}
+
+/* line 428, ../sass/global-desktop.scss */
+.no-svg:not(#foo) input[type='checkbox'] + .style {
+  background-image: url(../../style-imgs/unchecked.png);
+}
+
+/* line 433, ../sass/global-desktop.scss */
+.svg:not(#foo) input[type='checkbox']:checked + .style,
+.svg:not(#foo) input[type='checkbox']:default + .style {
+  background-image: url(../../style-imgs/checkBox.svg);
+}
+
+/* line 438, ../sass/global-desktop.scss */
+.no-svg:not(#foo) input[type='checkbox']:checked + .style,
+.no-svg:not(#foo) input[type='checkbox']:default + .style {
+  background-image: url(../../style-imgs/checkBox.png);
+}
+
+/* line 442, ../sass/global-desktop.scss */
+.trash {
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 3px 14px;
+  padding: 0.3rem 1.4rem;
+}
+
+/* line 450, ../sass/global-desktop.scss */
+.svg .trash {
+  background-image: url(../../style-imgs/largeTrash.svg);
+}
+
+/* line 454, ../sass/global-desktop.scss */
+.no-svg .trash {
+  background-image: url(../../style-imgs/largeTrash.png);
+}
+
+/*
+	body > #main > #navAndContentWrap > #homeNavWrap > #homeNav > all the btn wraps for main nav
+																		> #gateWrap > #gate + .style for top gate
+																		> #contentWrap > .style + the main sections, one has .currentMainSection
+																		> .style for bottom gate
+*/
+/* line 467, ../sass/global-desktop.scss */
+#contentWrap {
+  height: 100%;
+  overflow: auto;
+}
+
+/* line 472, ../sass/global-desktop.scss */
+#main {
+  height: 100%;
+}
+
+/* line 476, ../sass/global-desktop.scss */
+#navAndContentWrap {
+  top: 20px;
+  top: 2rem;
+  right: 8px;
+  right: 0.8rem;
+  bottom: 15px;
+  bottom: 1.5rem;
+  left: 55px;
+  left: 5.5rem;
+  max-width: 850px;
+  max-width: 85rem;
+  margin: 0 auto;
+  position: absolute;
+}
+
+/* line 491, ../sass/global-desktop.scss */
+#navAndContentWrap > .style:before {
+  border-bottom: 1px solid #e0e0e0;
+  background: #e0e0e0;
+  right: -5px;
+  right: -0.5rem;
+  width: 5px;
+  width: 0.5rem;
+  height: 100%;
+  top: 2px;
+  top: 0.2rem;
+  transform: skewY(45deg);
+  box-sizing: content-box;
+}
+
+/* line 506, ../sass/global-desktop.scss */
+#navAndContentWrap > .style {
+  left: -16px;
+  left: -1.6rem;
+  right: 6px;
+  right: 0.6rem;
+  height: 8px;
+  height: 0.8rem;
+  background: #fafafa;
+  bottom: 0;
+  z-index: 1000;
+  position: absolute;
+}
+
+/* line 520, ../sass/global-desktop.scss */
+#navAndContentWrap > .style:after {
+  width: 100%;
+  height: 5px;
+  height: 0.5rem;
+  bottom: -5px;
+  bottom: -.5rem;
+  left: 2px;
+  left: 0.2rem;
+  background: #f2f2f2;
+  transform: skewX(45deg);
+}
+
+@media (max-width: 500px) {
+  /* you need to specify which transitions you're doing becuase of 
+  	 DOM positioning adjusts.
+  	 it'll animate if you say 'all' when you don't want it to */
+  /* line 543, ../sass/global-desktop.scss */
+  body {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+
+  /* line 550, ../sass/global-desktop.scss */
+  h1 {
+    font-size: 27px;
+    font-size: 2.7rem;
+    line-height: 30px;
+    line-height: 3rem;
+  }
+
+  /* line 568, ../sass/global-desktop.scss */
+  input:not([type]),
+  input[type="tel"],
+  input[type="url"],
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="password"] {
+    height: 19px;
+    height: 1.9rem;
+    line-height: 19px !important;
+    padding: 0 0 0 2px;
+    padding: 0 0 0 0.2rem;
+  }
+
+  /* line 578, ../sass/global-desktop.scss */
+  input,
+  button,
+  input[type] {
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+
+  /* line 588, ../sass/global-desktop.scss */
+  button,
+  input[type="reset"],
+  input[type="button"],
+  input[type="submit"] {
+    height: 25px;
+    height: 2.5rem;
+    line-height: 21px;
+    line-height: 2.1rem;
+    padding: 2px 7px;
+    padding: 0.2rem 0.7rem;
+  }
+
+  /* line 599, ../sass/global-desktop.scss */
+  .error {
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+
+  /* line 605, ../sass/global-desktop.scss */
+  body:not(#foo) input[type='checkbox'] + .style,
+  body:not(#foo) input[type='checkbox']:checked + .style {
+    left: -15px;
+    left: -1.5rem;
+    padding: 0 0 0 11px;
+    padding: 0 0 0 1.1rem;
+  }
+
+  /* line 612, ../sass/global-desktop.scss */
+  .svg:not(#foo) input[type='checkbox'] + .style {
+    background-image: url(../../style-imgs/smallUnchecked.svg);
+  }
+
+  /* line 616, ../sass/global-desktop.scss */
+  .no-svg:not(#foo) input[type='checkbox'] + .style {
+    background-image: url(../../style-imgs/smallUnchecked.png);
+  }
+
+  /* line 621, ../sass/global-desktop.scss */
+  .svg:not(#foo) input[type='checkbox']:checked + .style,
+  .svg:not(#foo) input[type='checkbox']:default + .style {
+    background-image: url(../../style-imgs/smallCheckBox.svg);
+  }
+
+  /* line 626, ../sass/global-desktop.scss */
+  .no-svg:not(#foo) input[type='checkbox']:checked + .style,
+  .no-svg:not(#foo) input[type='checkbox']:default + .style {
+    background-image: url(../../style-imgs/smallCheckBox.png);
+  }
+}
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+/* line 16, ../sass/nav-desktop.scss */
+#homeNavWrap {
+  top: 20px;
+  top: -1rem;
+  left: -4.8rem;
+  position: absolute;
+  width: 100%;
+  max-width: 750px;
+  max-width: 85rem;
+  margin: 0 auto;
+  height: 0;
+}
+
+/* line 27, ../sass/nav-desktop.scss */
+#homeNav {
+  position: absolute;
+  height: 22.6rem;
+  height: 226px;
+  width: 4.6rem;
+  width: 40px;
+  left: 0;
+  top: 0;
+}
+
+/* line 42, ../sass/nav-desktop.scss */
+#homeNav > .buttonWrap {
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  position: absolute;
+  overflow: visible;
+}
+
+/* line 56, ../sass/nav-desktop.scss */
+#homeNav button:before {
+  border: none;
+  bottom: auto;
+  left: auto;
+  border-bottom: 1px solid #e0e0e0;
+  background: #e0e0e0;
+  right: -8px;
+  right: -0.8rem;
+  width: 8px;
+  width: 0.8rem;
+  height: 100%;
+  top: 4px;
+  top: 0.4rem;
+  transform: skewY(45deg);
+  box-sizing: content-box;
+}
+
+/* line 75, ../sass/nav-desktop.scss */
+#homeNav button {
+  border: none;
+  box-shadow: none;
+  line-height: normal;
+  padding: 0;
+  text-align: left;
+  width: 32px;
+  width: 3.2rem;
+  position: absolute;
+}
+
+/* line 87, ../sass/nav-desktop.scss */
+#homeNav button:after {
+  border: none;
+  right: auto;
+  top: auto;
+  width: 100%;
+  height: 8px;
+  height: 0.8rem;
+  bottom: -8px;
+  bottom: -0.8rem;
+  left: 4px;
+  left: 0.4rem;
+  background: #f2f2f2;
+  transform: skewX(45deg);
+}
+
+/* line 105, ../sass/nav-desktop.scss */
+#newFeedsButtonWrap {
+  height: 82px;
+}
+
+/* line 109, ../sass/nav-desktop.scss */
+#newFeedsButton {
+  border-top-left-radius: 12px;
+  border-top-left-radius: 1.2rem;
+  height: 74px;
+}
+
+/* line 115, ../sass/nav-desktop.scss */
+#homeNav object {
+  position: relative;
+}
+
+/* line 119, ../sass/nav-desktop.scss */
+#newButtonImage {
+  left: 0.8rem;
+  top: 0.6rem;
+}
+
+/* line 124, ../sass/nav-desktop.scss */
+#savedPostsButtonWrap {
+  top: 74px;
+  height: 44px;
+}
+
+/* line 128, ../sass/nav-desktop.scss */
+#savedPostsButton {
+  height: 36px;
+}
+
+/* line 131, ../sass/nav-desktop.scss */
+#savedButtonImage {
+  left: 0.3rem;
+  top: 0.1rem;
+}
+
+/* line 136, ../sass/nav-desktop.scss */
+#faqButtonWrap {
+  top: 110px;
+  height: 60px;
+}
+
+/* line 141, ../sass/nav-desktop.scss */
+#faqButton {
+  height: 52px;
+}
+
+/* line 145, ../sass/nav-desktop.scss */
+#faqButtonImage {
+  left: 0.7rem;
+}
+
+/* line 149, ../sass/nav-desktop.scss */
+#settingsButtonWrap {
+  height: 40px;
+  top: 162px;
+}
+
+/* line 156, ../sass/nav-desktop.scss */
+.safari #settingsButtonWrap > #settingsButton:before {
+  border-bottom: none;
+}
+
+/* line 160, ../sass/nav-desktop.scss */
+#settingsButton {
+  height: 40px;
+  border-bottom-left-radius: 12px;
+}
+
+/* line 165, ../sass/nav-desktop.scss */
+#settingsButtonWrap > #settingsButton:after {
+  z-index: -10000;
+  width: 2.6rem;
+  height: 1.2rem;
+  bottom: -0.8rem;
+  left: auto;
+  right: -0.2rem;
+}
+
+/* line 175, ../sass/nav-desktop.scss */
+.safari #settingsButtonWrap > #settingsButton:after {
+  border-right: 1px solid #f2f2f2;
+}
+
+/* line 179, ../sass/nav-desktop.scss */
+#settingsButtonImage + .style {
+  width: 32px;
+  height: 10px;
+  background: #fafafa;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  border-bottom-left-radius: 12px;
+}
+
+/* line 191, ../sass/nav-desktop.scss */
+#settingsButtonImage {
+  left: 0.3rem;
+  top: -0.2rem;
+}
+
+/* line 198, ../sass/nav-desktop.scss */
+#gateWrap {
+  top: -10px;
+  position: absolute;
+  width: 100%;
+  max-width: 750px;
+  max-width: 85rem;
+  margin: 0 auto;
+  height: 18px;
+  height: 1.8rem;
+}
+
+/* line 210, ../sass/nav-desktop.scss */
+#gate:before {
+  	/*
+    
+    to prevent the gap,
+    why not a triangle at the top of a solid block.
+    
+    
+    */
+  width: 8px;
+  width: 0.8rem;
+  height: 8px;
+  height: 0.8rem;
+  background: #e0e0e0;
+  right: -2px;
+  right: -0.8rem;
+  top: 4px;
+  top: 0.4rem;
+  transform: skewY(45deg);
+}
+
+/* line 231, ../sass/nav-desktop.scss */
+#gate {
+  position: absolute;
+  right: 8px;
+  left: -16px;
+  height: 10px;
+  height: 1rem;
+  background: #fafafa;
+  border-bottom: 2px solid #f2f2f2;
+  border-bottom: 0.2rem solid #f2f2f2;
+}
+
+/* line 244, ../sass/nav-desktop.scss */
+#gate:after {
+  width: 16px;
+  width: 1.6rem;
+  height: 8px;
+  height: 0.8rem;
+  background: #f2f2f2;
+  right: -4px;
+  right: -0.4rem;
+  bottom: -8px;
+  bottom: -0.8rem;
+  transform: skewX(45deg);
+}
+
+/* line 260, ../sass/nav-desktop.scss */
+#gate + .style:after,
+#gate + .style:before {
+  width: 0;
+  height: 0;
+}
+
+/*
+ *	the left nub is made of three css half square triangles.
+ *	the first two are the same color making a parrellagram
+ *	the last is darker and under the gate
+ */
+/* line 269, ../sass/nav-desktop.scss */
+#gate + .style:before {
+  left: -8px;
+  left: -0.8rem;
+  border-top: 8px solid #f2f2f2;
+  border-top: 0.8rem solid #f2f2f2;
+  border-left: 8px solid transparent;
+  border-left: 0.8rem solid transparent;
+}
+
+/* line 280, ../sass/nav-desktop.scss */
+#gate + .style {
+  width: 8px;
+  width: 0.8rem;
+  height: 8px;
+  height: 0.8rem;
+  left: -8px;
+  position: absolute;
+  bottom: 0;
+  background: #f2f2f2;
+}
+
+/* line 294, ../sass/nav-desktop.scss */
+#gate + .style:after {
+  right: 0;
+  border-top: 8px solid #e0e0e0;
+  border-top: 0.8rem solid #e0e0e0;
+  border-left: 8 solid transparent;
+  border-left: 0.8rem solid transparent;
+}
+
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+/* line 13, ../sass/popups-desktop.scss */
+#popUps {
+  left: -200%;
+}
+
+/* line 18, ../sass/popups-desktop.scss */
+#popUps,
+.popUpWrap {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* line 25, ../sass/popups-desktop.scss */
+.popUpWrap {
+  overflow: hidden;
+}
+
+/* line 30, ../sass/popups-desktop.scss */
+.popUpWrap.onScreen {
+  left: 200%;
+  z-index: 100;
+}
+
+/* line 35, ../sass/popups-desktop.scss */
+.popUpBox:before {
+  border-top: 3px solid #f2f2f2;
+  border-top: 0.3rem solid #f2f2f2;
+  border-left: 3px solid transparent;
+  border-left: 0.3rem solid transparent;
+  bottom: -3px;
+  bottom: -0.3rem;
+  box-sizing: content-box;
+  right: -3px;
+  right: -0.3rem;
+  width: 100%;
+}
+
+/* line 48, ../sass/popups-desktop.scss */
+.popUpBox {
+  background: #fafafa;
+  margin: 0 auto;
+  top: 50%;
+  padding: 15px 10px 8px 15px;
+  padding: 1.5rem 1rem 0.8rem 1.5rem;
+  position: relative;
+  width: 227px;
+  width: 22.7rem;
+  transition-duration: 0.5s;
+  transition-property: width, padding, height, margin-top;
+}
+
+/* line 63, ../sass/popups-desktop.scss */
+.onScreen > .popUpBox {
+  opacity: 0;
+  top: 42%;
+}
+
+/* line 68, ../sass/popups-desktop.scss */
+.popUpBox:after {
+  background: #e0e0e0;
+  height: 100%;
+  top: 2px;
+  top: 0.2rem;
+  transform: skewY(45deg);
+  right: -3px;
+  right: -0.3rem;
+  width: 3px;
+  width: 0.3rem;
+}
+
+/* line 81, ../sass/popups-desktop.scss */
+#cancelFeedPopUp > .popUpBox,
+#deletePostPopUp > .popUpBox {
+  height: 229px;
+  height: 23.2rem;
+  margin-top: -116px;
+  margin-top: -11.6rem;
+}
+
+/* line 89, ../sass/popups-desktop.scss */
+#deletePostsPopUp > .popUpBox,
+#deleteAccountPopUp > .popUpBox {
+  height: 259px;
+  height: 25.9rem;
+  margin-top: -130px;
+  margin-top: -13rem;
+}
+
+/* line 96, ../sass/popups-desktop.scss */
+#denySignupTutorialPopUp > .popUpBox {
+  height: 216px;
+  height: 21.6rem;
+  margin-top: -108px;
+  margin-top: -10.8rem;
+}
+
+/* line 107, ../sass/popups-desktop.scss */
+.no-js #jsIsDisabledPopUp,
+.oldIe #yourBrowserIsOldPopUp,
+.no-js.oldIe #jsIsDisabledPopUp {
+  left: 200%;
+}
+
+/* line 112, ../sass/popups-desktop.scss */
+#jsIsDisabledPopUp > .popUpBox {
+  height: 208px;
+  height: 20.8rem;
+  margin-top: -130px;
+  margin-top: -13rem;
+}
+
+/* line 121, ../sass/popups-desktop.scss */
+.no-js #jsIsDisabledPopUp > .popUpBox,
+.oldIe #yourBrowserIsOldPopUp > .popUpBox,
+.no-js.oldIe #jsIsDisabledPopUp > .popUpBox {
+  opacity: 1 !important;
+  top: 50%;
+  z-index: 100;
+}
+
+/* line 128, ../sass/popups-desktop.scss */
+#loginPopUp > .popUpBox,
+#signUpPopUp > .popUpBox {
+  height: 192px;
+  height: 19.2rem;
+  margin-top: -96px;
+  margin-top: -9.6rem;
+}
+
+/* line 135, ../sass/popups-desktop.scss */
+#rssSearchPopUp > .popUpBox {
+  height: 242px;
+  height: 24.2rem;
+  margin-top: -121px;
+  margin-top: -12.1rem;
+}
+
+/* line 143, ../sass/popups-desktop.scss */
+#yourBrowserIsOldPopUp > .popUpBox {
+  height: 246px;
+  height: 24.6rem;
+  margin-top: -140px;
+  margin-top: -14rem;
+}
+
+/* line 151, ../sass/popups-desktop.scss */
+.no-js.oldIe #yourBrowserIsOldPopUp {
+  left: -200%;
+}
+
+/* line 156, ../sass/popups-desktop.scss */
+.popUpBox > p,
+.popUpBox > h1 {
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  transition: 0.5s height, margin-bottom;
+}
+
+/* line 164, ../sass/popups-desktop.scss */
+.popUpBox > input[type="text"],
+.popUpBox > input[type="password"] {
+  margin: 0 0 16px 0;
+  margin: 0 0 1.6rem 0;
+  width: 195px;
+  width: 19.5rem;
+  transition-duration: 0.5s;
+  transition-property: width, margin;
+}
+
+/* line 174, ../sass/popups-desktop.scss */
+.popUpBox > label {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  transition: margin-bottom 0.5s;
+}
+
+/* line 181, ../sass/popups-desktop.scss */
+.popUpBox .buttonWrap {
+  bottom: 7px;
+  bottom: 0.7rem;
+  position: absolute;
+  transition-duration: 0.5s;
+  transition-property: right, bottom;
+}
+
+/* line 191, ../sass/popups-desktop.scss */
+#denySignupTutorialPopUp .buttonWrap,
+#popUps .popUpBox > .buttonWrap + .buttonWrap {
+  right: 9px;
+  right: 0.9rem;
+}
+
+/* line 201, ../sass/popups-desktop.scss */
+#cancelFeedPopUp .buttonWrap,
+#deletePostPopUp .buttonWrap,
+#deletePostsPopUp .buttonWrap,
+#deleteAccountPopUp .buttonWrap {
+  right: 86px;
+  right: 8.6rem;
+}
+
+/* line 209, ../sass/popups-desktop.scss */
+#loginPopUp .buttonWrap,
+#signUpPopUp .buttonWrap,
+#rssSearchPopUp .buttonWrap {
+  right: 100px;
+  right: 10rem;
+}
+
+@media (max-width: 500px) {
+  /* line 217, ../sass/popups-desktop.scss */
+  .popUpBox {
+    padding: 12px 7px 6px 12px;
+    padding: 1.2rem 0.7rem 0.6rem 1.2rem;
+    width: 170px;
+    width: 17rem;
+  }
+
+  /* line 225, ../sass/popups-desktop.scss */
+  #cancelFeedPopUp > .popUpBox,
+  #deletePostPopUp > .popUpBox {
+    height: 178px;
+    height: 17.8rem;
+    margin-top: -89px;
+    margin-top: -8.9rem;
+  }
+
+  /* line 233, ../sass/popups-desktop.scss */
+  #deletePostsPopUp > .popUpBox,
+  #deleteAccountPopUp > .popUpBox {
+    height: 196px;
+    height: 19.6rem;
+    margin-top: -98px;
+    margin-top: -9.8rem;
+  }
+
+  /* line 240, ../sass/popups-desktop.scss */
+  #denySignupTutorialPopUp > .popUpBox {
+    height: 169px;
+    height: 16.9rem;
+    margin-top: -85px;
+    margin-top: -8.5rem;
+  }
+
+  /* line 249, ../sass/popups-desktop.scss */
+  #jsIsDisabledPopUp > .popUpBox {
+    height: 156px;
+    height: 15.6rem;
+    margin-top: -95px;
+    margin-top: -9.5rem;
+  }
+
+  /* line 257, ../sass/popups-desktop.scss */
+  #loginPopUp > .popUpBox,
+  #signUpPopUp > .popUpBox {
+    height: 148px;
+    height: 14.8rem;
+    margin-top: -74px;
+    margin-top: -7.4rem;
+  }
+
+  /* line 265, ../sass/popups-desktop.scss */
+  #rssSearchPopUp > .popUpBox {
+    height: 186px;
+    height: 18.6rem;
+    margin-top: -93px;
+    margin-top: -9.3rem;
+  }
+
+  /* line 272, ../sass/popups-desktop.scss */
+  #yourBrowserIsOldPopUp > .popUpBox {
+    height: 184px;
+    height: 18.4rem;
+    margin-top: -110px;
+    margin-top: -11rem;
+  }
+
+  /* line 279, ../sass/popups-desktop.scss */
+  .popUpBox > h1 {
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+  }
+
+  /* line 284, ../sass/popups-desktop.scss */
+  .popUpBox > p {
+    margin-bottom: 7px;
+    margin-bottom: 0.7rem;
+  }
+
+  /* line 290, ../sass/popups-desktop.scss */
+  .popUpBox > input[type="text"],
+  .popUpBox > input[type="password"] {
+    margin: 0 0 13px 0;
+    margin: 0 0 1.3rem 0;
+    width: 143px;
+    width: 14.3rem;
+  }
+
+  /* line 297, ../sass/popups-desktop.scss */
+  .popUpBox > label {
+    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
+  }
+
+  /* line 302, ../sass/popups-desktop.scss */
+  .popUpBox > .buttonWrap {
+    bottom: 6px;
+    bottom: 0.6rem;
+  }
+
+  /* line 308, ../sass/popups-desktop.scss */
+  #denySignupTutorialPopUp .buttonWrap,
+  .popUpBox > .buttonWrap + .buttonWrap {
+    right: 4px;
+    right: 0.4rem;
+  }
+
+  /* line 316, ../sass/popups-desktop.scss */
+  #cancelFeedPopUp .buttonWrap,
+  #deletePostPopUp .buttonWrap,
+  #deletePostsPopUp .buttonWrap,
+  #deleteAccountPopUp .buttonWrap {
+    right: 65px;
+    right: 6.5rem;
+  }
+
+  /* line 323, ../sass/popups-desktop.scss */
+  #loginPopUp .buttonWrap,
+  #signUpPopUp .buttonWrap,
+  #rssSearchPopUp .buttonWrap {
+    right: 77px;
+    right: 7.7rem;
+  }
+}
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+/* line 13, ../sass/settings.scss */
+.waveBottom {
+  padding: 2.6rem 2.3rem 1.4rem 2.3rem;
+  margin: 0 0 3.1rem 0;
+}
+
+/* line 18, ../sass/settings.scss */
+.waveTop,
+.waveTop.waveBottom {
+  padding: 1.4rem 2.3rem 1.4rem 2.3rem;
+}
+
+/* line 21, ../sass/settings.scss */
+.waveTop:not(.waveBottom) {
+  margin-bottom: 2rem;
+}
+
+/* line 26, ../sass/settings.scss */
+.waveTop,
+.waveBottom {
+  background: #fafafa;
+  position: relative;
+  box-shadow: 1px 1px #e0e0e0, 2px 2px #e0e0e0;
+}
+
+/* line 34, ../sass/settings.scss */
+.waveBottom {
+  box-shadow: 1px 1px #e0e0e0, 2px 2px #e0e0e0;
+}
+
+/* line 43, ../sass/settings.scss */
+.waveBottom:after {
+  bottom: -2rem;
+  box-shadow: 0px -2px 0 0 #fafafa, 10px -9px 0 -8px #e0e0e0;
+}
+
+/* line 50, ../sass/settings.scss */
+.svg .waveBottom:after {
+  background-image: url(../../style-imgs/waveBottom.svg);
+}
+
+/* line 54, ../sass/settings.scss */
+.no-svg .waveBottom:after {
+  background-image: url(../../style-imgs/waveBottom.png);
+}
+
+/* line 59, ../sass/settings.scss */
+.waveTop:before,
+.waveBottom:after {
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+/* line 70, ../sass/settings.scss */
+.waveTop:before {
+  top: -2rem;
+  box-shadow: 3px 1px 0 -2px #e0e0e0, 4px 2px 0 -2px #e0e0e0, 0 4px 0 0 #fafafa, 4px 4px 0 -2px #e0e0e0;
+}
+
+/* line 81, ../sass/settings.scss */
+.svg .waveTop:before {
+  background-image: url(../../style-imgs/waveTop.svg);
+}
+
+/* line 85, ../sass/settings.scss */
+.no-svg .waveTop:before {
+  background-image: url(../../style-imgs/waveTop.png);
+}
+
+/* line 92, ../sass/settings.scss */
+#settingsNav > a {
+  margin: 0 1rem 0 0;
+}
+
+/* line 96, ../sass/settings.scss */
+#settingsNav > a:last-of-type {
+  margin: 0;
+}
+
+/* line 102, ../sass/settings.scss */
+#userSettings h2 {
+  font: 36px / 41px 'Gotham-Black', sans-serif;
+  font: 3.6rem / 4.1rem 'Gotham-Black', sans-serif;
+  color: #333;
+  margin: 0 0 0.4rem 0;
+}
+
+/* line 110, ../sass/settings.scss */
+#userSettings #newFeedUrl,
+#userSettings .existingFeedUrl {
+  width: 100%;
+  max-width: 58.5rem;
+}
+
+/* line 116, ../sass/settings.scss */
+#editFeedsWrap > hr:first-of-type {
+  display: none;
+}
+
+/* line 120, ../sass/settings.scss */
+#userSettings .toTop {
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  padding: 3px 14px;
+}
+
+/* line 128, ../sass/settings.scss */
+#rangePit {
+  height: 14px;
+  width: 100%;
+  max-width: 205px;
+  border-top: 3px solid #f2f2f2;
+  border-left: 3px solid #e0e0e0;
+  box-shadow: 1px 1px #f2f2f2;
+  position: relative;
+  cursor: pointer;
+}
+
+/* line 138, ../sass/settings.scss */
+#rangePit:after {
+  height: 17px;
+  width: 5px;
+  background: #fafafa;
+  z-index: 1;
+  right: -6px;
+  top: -6px;
+}
+
+/* line 149, ../sass/settings.scss */
+#rangeHandle:before {
+  width: 19px;
+  height: 0;
+  border-top: 3px solid #f0f0f0;
+  border-left: 3px solid transparent;
+  bottom: -3px;
+}
+
+/* line 159, ../sass/settings.scss */
+#rangeHandle {
+  width: 20px;
+  height: 22px;
+  background: #fafafa;
+  border: 1px solid #fafafa;
+  box-shadow: inset 1px 1px 0px 1px #f4f4f4, 4px 0 0 -1px #e0e0e0;
+  position: absolute;
+  top: -9px;
+  left: 0%;
+}
+
+/* line 171, ../sass/settings.scss */
+#rangeHandle:after {
+  width: 0;
+  height: 0;
+  border-top: 3px solid #fafafa;
+  border-left: 3px solid transparent;
+  top: 0;
+  right: -4px;
+}
+
+/* line 183, ../sass/settings.scss */
+#rangeHandle .style:before {
+  width: 0;
+  height: 0;
+  border-top: 3px solid #e0e0e0;
+  border-left: 3px solid transparent;
+  background: #f0f0f0;
+  bottom: -3px;
+  left: -3px;
+}
+
+/* line 194, ../sass/settings.scss */
+#rangeHandle .style {
+  height: 11px;
+  width: 3px;
+  position: absolute;
+  right: -7px;
+  top: 8px;
+  background: #e0e0e0;
+}
+
+/* line 204, ../sass/settings.scss */
+#rangeHandle .style:after {
+  width: 0;
+  height: 0;
+  border-bottom: 3px solid #e0e0e0;
+  border-right: 3px solid transparent;
+  top: -3px;
+}
+
+/* line 216, ../sass/settings.scss */
+.canEdit > .existingFeedTitle {
+  border: 0;
+}
+
+/* line 221, ../sass/settings.scss */
+#userSettings .toTop {
+  margin: 0 0 1.6rem 0;
+}
+
+/* line 224, ../sass/settings.scss */
+#userSettings .toTopButton {
+  top: 1.5rem;
+}
+
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+/* line 14, ../sass/splash-desktop.scss */
+#splashAboutWrap {
+  height: 164px;
+  height: 16.4rem;
+  left: 50%;
+  margin: -82px 0 0 -206px;
+  margin: -8.2rem 0 0 -20.6rem;
+  perspective: 1200px;
+  perspective: 120rem;
+  position: relative;
+  top: 50%;
+  width: 412px;
+  width: 41.2rem;
+  display: none !important;
+}
+
+/* line 32, ../sass/splash-desktop.scss */
+.no-js #splashAboutWrap,
+.oldIe #splashAboutWrap {
+  display: none;
+}
+
+/* line 36, ../sass/splash-desktop.scss */
+#splashAbout {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  width: 100%;
+}
+
+/* line 45, ../sass/splash-desktop.scss */
+#splashAbout:after,
+#splashAbout:before {
+  display: none;
+}
+
+/* line 50, ../sass/splash-desktop.scss */
+.csstransforms3d #splashAbout.showAbout {
+  transform: translateZ(-82px) rotateX(-90deg);
+  transform: translateZ(-8.2rem) rotateX(-9rem);
+}
+
+/* line 55, ../sass/splash-desktop.scss */
+.csstransforms3d #splashAbout.hideAbout {
+  transform: translateZ(-82px);
+  transform: translateZ(-8.2rem);
+}
+
+/* line 60, ../sass/splash-desktop.scss */
+#splashAbout > * {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* fixes the visible distorted text in the back
+	 you have to re-write the full property cuz moz doesn't
+	 accept changing just transition-delay */
+/* line 72, ../sass/splash-desktop.scss */
+.csstransforms3d #splashAbout.hideAbout #rectTop,
+.csstransforms3d #splashAbout.showAbout #rectFront {
+  transition: opacity 200ms linear 650ms;
+  opacity: 0;
+}
+
+/* line 78, ../sass/splash-desktop.scss */
+.csstransforms3d #splashAbout.showAbout #rectTop,
+.csstransforms3d #splashAbout.hideAbout #rectFront {
+  transition: opacity 200ms linear 0;
+  opacity: 1;
+}
+
+/* line 83, ../sass/splash-desktop.scss */
+#rectFront {
+  transform: translateZ(82px);
+  transform: translateZ(8.2rem);
+}
+
+/* line 88, ../sass/splash-desktop.scss */
+#rectTop {
+  transform: rotateX(90deg) translateZ(82px);
+  transform: rotateX(9rem) translateZ(8.2rem);
+}
+
+/* line 94, ../sass/splash-desktop.scss */
+.no-csstransforms #rectTop,
+.no-csstransforms3d #rectTop {
+  opacity: 0;
+}
+
+/* line 98, ../sass/splash-desktop.scss */
+#splashAboutHeader {
+  color: #fff;
+  font-size: 30px;
+  font-size: 3rem;
+  text-shadow: 1px 1px 0 #e0e0e0;
+  text-shadow: 0.1rem 0.1rem 0 #e0e0e0;
+  opacity: 1;
+  padding: 40px 0 0 70px;
+  padding: 4rem 0 0 7rem;
+}
+
+/* line 109, ../sass/splash-desktop.scss */
+#splashAboutContent {
+  padding: 10px 16px;
+  padding: 1rem 1.6rem;
+}
+
+/* line 115, ../sass/splash-desktop.scss */
+.safari #splashAboutContent {
+  /*
+  	you look into this for awhile, even the webkit mail group.
+  	there is no solution and this has been going on for 5 years.
+  	src: https://bugs.webkit.org/show_bug.cgi?id=23364
+  	it's a problem with the hardware.
+  	css tricks doesn't give a solution either, even though there's an article
+  	claiming a fix.
+  */
+  -webkit-text-stroke: 0.45px;
+}
+
+/* line 127, ../sass/splash-desktop.scss */
+#splashAbout ul {
+  height: 38px;
+  height: 3.8rem;
+  position: absolute;
+  right: 10px;
+  right: 1rem;
+  width: 170px;
+  width: 17rem;
+  transition-duration: 0.5s;
+  transition-property: height, right, width;
+}
+
+/* line 143, ../sass/splash-desktop.scss */
+#splashAbout .continueWrap {
+  bottom: 30px;
+  bottom: 3rem;
+  right: 36px;
+  right: 3.6rem;
+  width: 110px;
+  width: 11rem;
+  transition-duration: 0.5s;
+  transition-property: bottom, height, right, width;
+}
+
+/* line 158, ../sass/splash-desktop.scss */
+#splashAbout .settings {
+  background-image: url(../../style-imgs/greySettingsIcon.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 18px;
+  height: 1.8rem;
+  position: relative;
+  top: 3px;
+  top: 0.3rem;
+  width: 18px;
+  width: 1.8rem;
+  transition-duration: 0.5s;
+  transition-property: height, width;
+}
+
+/* line 174, ../sass/splash-desktop.scss */
+.no-svg #splashAbout .settings {
+  background-image: url(../../style-imgs/greySettingsIcon.png);
+}
+
+/* line 181, ../sass/splash-desktop.scss */
+#splashNav {
+  position: absolute;
+  top: 10px;
+  top: 1rem;
+  right: 10px;
+  right: 1rem;
+  width: 100px;
+  width: 10rem;
+  z-index: 1;
+  transition: width, 0.5s;
+  display: none !important;
+}
+
+/* line 198, ../sass/splash-desktop.scss */
+.no-js #splashNav,
+.oldIe #splashNav {
+  display: none;
+}
+
+/* line 202, ../sass/splash-desktop.scss */
+.buttonWrap.sky:before {
+  border: 1px solid #fff;
+  border-width: 1px 0 0 1px;
+  left: 5px;
+  left: 0.5rem;
+  height: 100%;
+  opacity: 0;
+  top: 5px;
+  top: 0.5rem;
+  width: 100%;
+}
+
+/* line 214, ../sass/splash-desktop.scss */
+.buttonWrap.sky:hover:before {
+  background-color: #00ddff;
+  opacity: 1;
+}
+
+/* line 219, ../sass/splash-desktop.scss */
+.no-rgba button.sky:before {
+  background-color: #00ddff;
+}
+
+/* line 223, ../sass/splash-desktop.scss */
+.buttonWrap.sky {
+  float: left;
+  margin: 0 0 10px 0;
+  margin: 0 0 1rem 0;
+  opacity: 0.9999;
+  padding: 1px 3px 3px 1px;
+  padding: 0.1rem 0.3rem 0.3rem 0.1rem;
+  transition: padding, 0.5s;
+}
+
+/* line 234, ../sass/splash-desktop.scss */
+#splashAbout .buttonWrap.sky {
+  margin: 0 10px 10px 0;
+  margin: 0 1rem 1rem 0;
+}
+
+/* line 241, ../sass/splash-desktop.scss */
+#splashAbout .buttonWrap.sky + .buttonWrap.sky {
+  margin: 0 0 10px 0;
+  margin: 0 0 1rem 0;
+}
+
+/* line 248, ../sass/splash-desktop.scss */
+.-moz- #splashAbout .buttonWrap.sky + .buttonWrap.sky {
+  padding: 1px 2px 3px 1px;
+  padding: 0.1rem 0.2rem 0.3rem 0.1rem;
+  top: auto;
+}
+
+/* line 258, ../sass/splash-desktop.scss */
+.buttonWrap.sky:hover > button {
+  transform: translate(7px, 7px);
+  transform: translate(0.7rem, 0.7rem);
+}
+
+/* line 264, ../sass/splash-desktop.scss */
+.no-csstransforms .buttonWrap.sky:hover > button {
+  top: 7px;
+  left: 7px;
+}
+
+/* line 269, ../sass/splash-desktop.scss */
+.buttonWrap.sky:last-child {
+  margin: 0;
+}
+
+/* line 273, ../sass/splash-desktop.scss */
+button.sky:before {
+  border: 1px solid #fff;
+  border-width: 0 1px;
+  box-sizing: content-box;
+  background-color: rgba(0, 221, 255, 0.7);
+  height: 3px;
+  height: 0.3rem;
+  width: 100%;
+  left: 1px;
+  left: 0.1rem;
+  bottom: -4px;
+  bottom: -0.4rem;
+  transform: skewX(45deg);
+}
+
+/* line 288, ../sass/splash-desktop.scss */
+button.sky {
+  background-color: #00ddff;
+  background-color: rgba(0, 221, 255, 0.5);
+  border: 1px solid #fff;
+  box-shadow: none;
+  color: #fff;
+  padding: 0 8px 3px 9px;
+  padding: 0 0.8rem 0.3rem 0.9rem;
+  text-align: left;
+  transform: translate(0, 0);
+  transition: background-color 0.5s linear, transform 0.1s, height 0.5s, line-height 0.5s, padding 0.5s;
+}
+
+/* line 308, ../sass/splash-desktop.scss */
+button.sky:after {
+  background-color: #00ddff;
+  background-color: rgba(0, 221, 255, 0.6);
+  border-width: 1px 0;
+  border-top-color: #fff;
+  box-sizing: content-box;
+  height: 100%;
+  right: -4px;
+  right: -0.4rem;
+  top: 1px;
+  top: 0.1rem;
+  transform: skewY(45deg);
+  width: 3px;
+  width: 0.3rem;
+}
+
+/* line 324, ../sass/splash-desktop.scss */
+.no-csstransitions #splashNav button {
+  background: transparent;
+}
+
+@media (max-width: 500px) and (max-height: 200px) {
+  /* line 331, ../sass/splash-desktop.scss */
+  #splashAboutWrap {
+    left: 133px;
+    left: 13.3rem;
+    margin: -78px 0 0 100px;
+    margin: -7.8rem 0 0 10rem;
+    perspective: 30000px;
+    perspective: 3000rem;
+    top: 90px;
+    top: 9rem;
+  }
+}
+@media (max-width: 500px) {
+  /* line 344, ../sass/splash-desktop.scss */
+  #splashAboutWrap {
+    height: 170px;
+    height: 17rem;
+    width: 250px;
+    width: 25rem;
+    margin: -85px 0 0 -125px;
+    margin: -8.5rem 0 0 -12.5rem;
+  }
+
+  /* line 355, ../sass/splash-desktop.scss */
+  .csstransforms3d #splashAbout.showAbout {
+    transform: translateZ(-85px) rotateX(-90deg);
+    transform: translateZ(-8.5rem) rotateX(-9rem);
+  }
+
+  /* line 360, ../sass/splash-desktop.scss */
+  .csstransforms3d #splashAbout.hideAbout {
+    transform: translateZ(-85px);
+    transform: translateZ(-8.5rem);
+  }
+
+  /* line 365, ../sass/splash-desktop.scss */
+  #rectFront {
+    transform: translateZ(85px);
+    transform: translateZ(8.5rem);
+  }
+
+  /* line 369, ../sass/splash-desktop.scss */
+  #splashAboutHeader {
+    font-size: 25px;
+    font-size: 2.5rem;
+    padding: 42px 0 0 48px;
+    padding: 5rem 0 0 2rem;
+  }
+
+  /* line 375, ../sass/splash-desktop.scss */
+  #rectTop {
+    transform: rotateX(90deg) translateZ(85px);
+    transform: rotateX(9rem) translateZ(8.5rem);
+  }
+
+  /* line 379, ../sass/splash-desktop.scss */
+  #splashAboutContent {
+    padding: 8px 12px;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* line 384, ../sass/splash-desktop.scss */
+  #splashAbout ul {
+    height: 34px;
+    height: 3rem;
+    right: 7px;
+    right: 0.7rem;
+    width: 150px;
+    width: 12.6rem;
+  }
+
+  /* line 395, ../sass/splash-desktop.scss */
+  #splashAbout .continueWrap {
+    bottom: 70px;
+    bottom: 7rem;
+    right: 8px;
+    right: 0.8rem;
+    width: 80px;
+    width: 8rem;
+  }
+
+  /* line 407, ../sass/splash-desktop.scss */
+  .-moz- #splashAbout .buttonWrap.sky + .buttonWrap.sky {
+    padding: 1px 3px 3px 1px;
+    padding: 0.1rem 0.3rem 0.3rem 0.1rem;
+    top: 1px;
+    top: 0.1rem;
+  }
+
+  /* line 418, ../sass/splash-desktop.scss */
+  #splashAbout .settings {
+    background-image: url(../../style-imgs/smallGreySettingsIcon.svg);
+    height: 14px;
+    height: 1.4rem;
+    width: 14px;
+    width: 1.4rem;
+  }
+
+  /* line 426, ../sass/splash-desktop.scss */
+  .no-svg #splashAbout .settings {
+    background-image: url(../../style-imgs/smallGreySettingsIcon.png);
+  }
+
+  /* line 433, ../sass/splash-desktop.scss */
+  #splashNav {
+    width: 72px;
+    width: 7.2rem;
+  }
+
+  /* line 438, ../sass/splash-desktop.scss */
+  .buttonWrap.sky {
+    margin: 0 0 0.5rem 0;
+    padding: 2px 3px 3px 1px;
+  }
+
+  /* line 443, ../sass/splash-desktop.scss */
+  button.sky {
+    height: 23px;
+    line-height: 21px;
+    padding: 0 5px;
+  }
+
+  /* line 449, ../sass/splash-desktop.scss */
+  button.sky:after {
+    background-color: #00ddff;
+    background-color: rgba(0, 221, 255, 0.6);
+    border-width: 1px 0;
+    border-top-color: #fff;
+    box-sizing: content-box;
+    height: 100%;
+    right: -4px;
+    right: -0.4rem;
+    top: 1px;
+    top: 0;
+    transform: skewY(45deg);
+    width: 3px;
+    width: 0.3rem;
+  }
+}
+@media (max-height: 400px) {
+  /* line 467, ../sass/splash-desktop.scss */
+  .-moz- #splashAboutWrap {
+    overflow: hidden;
+  }
+}
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+/* sets all the cloud animations.
+	 uses device media queries to determine speed rates.
+	 two classes are used, init for the initial run of each cloud and
+	 loop used after the first run.
+	 js uses a timer function to determine if each is on screen.
+	 if not, it adds class offscreen which cancels the animations.
+	 it then adds class loop to reinstate the animation.
+	 |||
+	 used tut: http://benfrain.com/using-lists-with-maps-in-sass-3-3/
+	 map: (key: (element, rate, percent-left) 
+	 be sure to change percent-lefts if you update pos */
+/*
+
+
+
+*/
+/* line 107, ../sass/background-desktop.scss */
+body {
+  background-color: #00ddff;
+}
+
+/* line 110, ../sass/background-desktop.scss */
+body.grey {
+  background-color: #fff;
+}
+
+/* line 114, ../sass/background-desktop.scss */
+#siteFooter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* line 124, ../sass/background-desktop.scss */
+#siteFooter > figure {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+/* line 130, ../sass/background-desktop.scss */
+#ground {
+  background-image: url(../../style-imgs/ground.svg);
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 64px;
+  height: 6.4rem;
+  left: 50%;
+  margin: 0 0 0 -210px;
+  margin: 0 0 0 -21rem;
+  width: 420px;
+  width: 42rem;
+  transition-duration: 0.5s;
+  transition-property: bottom, height, margin, width;
+}
+
+/* line 148, ../sass/background-desktop.scss */
+.no-svg {
+  background-image: url(../../style-imgs/ground.png);
+}
+
+/* line 152, ../sass/background-desktop.scss */
+#sun {
+  width: 29px;
+  width: 2.9rem;
+  height: 29px;
+  height: 2.9rem;
+  top: 5%;
+  left: 3%;
+  background-image: url(../../style-imgs/sun.svg);
+  transition-duration: 0.5s;
+  transition-property: left, top;
+}
+
+/* line 165, ../sass/background-desktop.scss */
+.no-svg #sun {
+  background-image: url(../../style-imgs/sun.png);
+}
+
+/* line 170, ../sass/background-desktop.scss */
+#cloudsA,
+#cloudsB {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 177, ../sass/background-desktop.scss */
+#cloudsA {
+  left: 0;
+  opacity: 0;
+}
+
+/* line 185, ../sass/background-desktop.scss */
+#cloudsB {
+  left: 100%;
+}
+
+/* line 190, ../sass/background-desktop.scss */
+.no-csstransforms #cloudsB,
+.no-csstransitions #cloudsB {
+  display: none !important;
+}
+
+/* line 196, ../sass/background-desktop.scss */
+#cloudsA > div,
+#cloudsB > div {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: width 0.5s;
+  height: 11.75%;
+}
+
+/* line 204, ../sass/background-desktop.scss */
+.cloud1 {
+  width: 67px;
+  width: 6.7rem;
+  left: 72.5%;
+  top: 5%;
+  background-image: url(../../style-imgs/cloud1.svg);
+}
+
+/* line 212, ../sass/background-desktop.scss */
+.no-svg .cloud1 {
+  background-image: url(../../style-imgs/cloud1.png);
+}
+
+/* line 216, ../sass/background-desktop.scss */
+.cloud2 {
+  top: 16.25%;
+  left: 16.25%;
+}
+
+/* line 224, ../sass/background-desktop.scss */
+.cloud2,
+.cloud5,
+.cloud3,
+.cloud6 {
+  width: 51px;
+  width: 5.1rem;
+}
+
+/* line 230, ../sass/background-desktop.scss */
+.cloud2,
+.cloud5 {
+  background-image: url(../../style-imgs/cloud2.svg);
+}
+
+/* line 235, ../sass/background-desktop.scss */
+.no-svg .cloud2,
+.no-svg .cloud5 {
+  background-image: url(../../style-imgs/cloud2.png);
+}
+
+/* line 239, ../sass/background-desktop.scss */
+.cloud3 {
+  top: 50%;
+  left: 95%;
+}
+
+/* line 245, ../sass/background-desktop.scss */
+.cloud3,
+.cloud6 {
+  background-image: url(../../style-imgs/cloud3.svg);
+}
+
+/* line 250, ../sass/background-desktop.scss */
+.no-svg .cloud3,
+.no-svg .cloud6 {
+  background-image: url(../../style-imgs/cloud3.png);
+}
+
+/* line 254, ../sass/background-desktop.scss */
+.cloud4 {
+  top: 61.25%;
+  left: 3%;
+}
+
+/* line 260, ../sass/background-desktop.scss */
+.cloud4,
+.cloud7 {
+  width: 69px;
+  width: 6.9rem;
+  background-image: url(../../style-imgs/cloud4.svg);
+}
+
+/* line 267, ../sass/background-desktop.scss */
+.no-svg .cloud4,
+.no-svg .cloud7 {
+  background-image: url(../../style-imgs/cloud4.png);
+}
+
+/* line 271, ../sass/background-desktop.scss */
+.cloud5 {
+  top: 72.5%;
+  left: 61.25%;
+}
+
+/* line 276, ../sass/background-desktop.scss */
+.cloud6 {
+  top: 83.75%;
+  left: 27.5%;
+}
+
+/* line 281, ../sass/background-desktop.scss */
+.cloud7 {
+  top: 92%;
+  left: 83.75%;
+}
+
+@media (max-width: 500px) and (max-height: 200px) {
+  /* line 287, ../sass/background-desktop.scss */
+  #sun {
+    top: -3rem;
+    left: -3rem;
+  }
+}
+@media (max-width: 500px) {
+  /* line 295, ../sass/background-desktop.scss */
+  #ground {
+    width: 330px;
+    width: 33rem;
+    height: 50px;
+    height: 5rem;
+    margin: 0 0 0 -165px;
+    margin: 0 0 0 -16.5rem;
+  }
+
+  /* line 307, ../sass/background-desktop.scss */
+  .cloud1 {
+    width: 50px;
+    width: 5rem;
+  }
+
+  /* line 316, ../sass/background-desktop.scss */
+  .cloud2,
+  .cloud5,
+  .cloud3,
+  .cloud6 {
+    width: 38px;
+    width: 3.8rem;
+  }
+
+  /* line 324, ../sass/background-desktop.scss */
+  .cloud4,
+  .cloud7 {
+    width: 52px;
+    width: 5.2rem;
+  }
+}
+@media (max-height: 220px) {
+  /* line 332, ../sass/background-desktop.scss */
+  #ground {
+    bottom: -64px;
+    bottom: -6.4rem;
+  }
+}
