@@ -1,0 +1,287 @@
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+
+/* sets all the cloud animations.
+	 uses device media queries to determine speed rates.
+	 two classes are used, init for the initial run of each cloud and
+	 loop used after the first run.
+	 js uses a timer function to determine if each is on screen.
+	 if not, it adds class offscreen which cancels the animations.
+	 it then adds class loop to reinstate the animation.
+	 |||
+	 used tut: http://benfrain.com/using-lists-with-maps-in-sass-3-3/
+	 map: (key: (element, rate, percent-left) 
+	 be sure to change percent-lefts if you update pos */
+
+/*
+
+
+
+*/
+
+$inc: 10;
+$min: 0;
+$max: 0;
+$dur: 0;
+$durRatio: 0.07806401249024;
+@mixin cloudAnimationMediaQueries {
+	@for $i from 3 through 30 {
+		$min: $inc * 10 * $i + 1;
+		$max: $inc * 10 + $min - 1;
+		$dur: round($max * $durRatio);
+		@media only screen and (min-device-width : #{$min}px) and (max-device-width : #{$max}px) {
+			@keyframes cloudsAInit {
+				0%	 { transform: translateX(-100%); }
+				100% { transform: translateX(#{$max * -0.2}rem); }
+			}
+			@keyframes clouds {
+				0%	 { transform: translateX(0); }
+				100% { transform: translateX(#{$max * -0.2}rem); }
+			}
+			
+			@keyframes cloudQuick {
+				0%	 { transform: translateX(0); }
+				100% { transform: translateX(#{$max * -0.05}rem); }
+			}
+			@keyframes cloudFast {
+				0%	 { transform: translateX(0); }
+				100% { transform: translateX(#{$max * -0.075}rem); }
+			}
+			@keyframes cloudFast {
+				0%	 { transform: translateX(0); }
+				100% { transform: translateX(#{$max * -0.09}rem); }
+			}
+			@keyframes cloudFaster {
+				0%	 { transform: translateX(0); }
+				100% { transform: translateX(#{$max * -0.0125}rem); }
+			}
+			@keyframes cloudFastest {
+				0%	 { transform: translateX(0); }
+				100% { transform: translateX(#{$max * -0.015}rem); }
+			}
+			#cloudsA {
+				animation-delay: 0s, #{$dur}s;
+				animation-duration: #{$dur}s, #{$dur * 2}s;
+			}
+			
+			#cloudsB {
+				animation-duration: #{$dur * 2}s;
+			}
+			
+			#cloudsA,
+			#cloudsB {
+				width: #{$max / 10}rem;
+			}
+			
+			
+			#cloudsA > .cloud2,
+			#cloudsA > .cloud3,
+			#cloudsA > .cloud5,
+			#cloudsA > .cloud7,
+			#cloudsB > .cloud1,
+			#cloudsB > .cloud2,
+			#cloudsB > .cloud4,
+			#cloudsB > .cloud5 {
+				animation-duration: #{$dur * 2}s;
+			}
+			
+		}
+	}
+}
+
+//@include cloudAnimationMediaQueries;
+
+
+
+
+
+
+#siteFooter {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	
+	figure {
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+	}
+}
+
+#ground {
+	background-image: url(../../style-imgs/ground.svg);
+	background-repeat: no-repeat;
+	bottom: 0;
+	height: 64px;
+	left: 50%;
+	margin: 0 0 0 -210px;
+	width: 420px;
+	
+	transition-duration: 0.5s;
+	transition-property: bottom, height, margin, width;
+	
+	.no-svg & {
+		background-image: url(../../style-imgs/ground.png);
+	}
+	
+	@media (#{$mainBreak}) {
+		width: 330px;
+		height: 50px;
+		margin: 0 0 0 -165px;
+	}
+	
+	@media (max-height: 220px) {
+		bottom: -64px;
+	}
+}
+
+#sun {
+	width: 29px;
+	height: 29px;
+	top: 5%;
+	left: 3%;
+	background-image: url(../../style-imgs/sun.svg);
+	
+	transition-duration: 0.5s;
+	transition-property: left, top;
+	
+	.no-svg & {
+		background-image: url(../../style-imgs/sun.png);
+	}
+	
+	@media (max-height: 500px) and (max-height: 200px) {
+		top: -30px;
+	}
+}
+
+#clouds-a,
+#clouds-b {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	
+	div {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: contain;
+		transition: width 0.5s;
+		height: 11.75%;
+	}
+}
+
+#clouds-a {
+	left: 0;
+	opacity: 0;
+}
+
+#clouds-b {
+	left: 100%;
+
+	.no-csstransforms &,
+	.no-csstransitions & {
+		display: none !important;
+	}
+}
+
+
+.cloud-2,
+.cloud-5,
+.cloud-3,
+.cloud-6 {
+	width: 51px;
+
+	@media (#{$mainBreak}) {
+		width: 38px;
+	}
+}
+
+.cloud-2,
+.cloud-5 {
+	background-image: url(../../style-imgs/cloud2.svg);
+
+	.no-svg & {
+		background-image: url(../../style-imgs/cloud2.png);
+	}
+}
+
+.cloud-3,
+.cloud-6 {
+	background-image: url(../../style-imgs/cloud3.svg);
+
+	.no-svg & {
+		background-image: url(../../style-imgs/cloud3.png);
+	}
+}
+
+.cloud-4,
+.cloud-7 {
+	width: 69px;
+	background-image: url(../../style-imgs/cloud4.svg);
+
+	.no-svg & {
+		background-image: url(../../style-imgs/cloud4.png);
+	}
+
+	@media (#{$mainBreak}) {
+		width: 52px;
+	}
+}
+
+
+.cloud-1 {
+	width: 67px;
+	left: 72.5%;
+	top: 5%;
+	background-image: url(../../style-imgs/cloud1.svg);
+	.no-svg & {
+		background-image: url(../../style-imgs/cloud1.png);
+	}
+
+	@media (#{$mainBreak}) {
+		width: 50px;
+	}
+}
+
+.cloud-2 {
+	top: 16.25%;
+	left: 16.25%;
+}
+
+.cloud-3 {
+	top: 50%;
+	left: 95%;
+}
+
+.cloud-4 {
+	top: 61.25%;
+	left: 3%;
+}
+
+.cloud-5 {
+	top: 72.5%;
+	left: 61.25%;
+}
+
+.cloud-6 {
+	top: 83.75%;
+	left: 27.5%;
+}
+
+.cloud-7 {
+	top: 92%;
+	left: 83.75%;
+}	
+

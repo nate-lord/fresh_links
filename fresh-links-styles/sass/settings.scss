@@ -1,0 +1,536 @@
+//______________general_______________\\
+
+.waveTop,
+.waveBottom {
+	background: $front;
+	// creates depth, main ds
+	box-shadow: 1px 1px $side,
+							2px 2px $side;
+	box-shadow: 0.1rem 0.1rem $side,
+							0.2rem 0.2rem $side;
+	position: relative;
+	
+	&:before,
+	&:after {
+		background-position: top right;
+		background-repeat: no-repeat;
+		height: 20px;
+		left: 0;
+		width: 100%;
+		
+		@media (#{$mainBreak}) {
+			height: 15px;
+		}
+	}
+}
+
+.waveTop,
+.waveTop.waveBottom {
+	padding: 14px 23px;
+	padding: 1.4rem 2.3rem;
+	
+	transition: padding $dur;
+	
+	@media (#{$mainBreak}) {
+		.waveTop,
+		.waveTop.waveBottom {
+			padding: 11px 17px;
+			padding: 1.1rem 1.7rem;
+		}
+	}
+}
+
+.waveTop {
+	&:not(.waveBottom) {
+		margin-bottom: 20px;
+		@media (#{$mainBreak}) {
+			margin-bottom: 15px;
+		}
+	}
+	
+	&:before {
+		box-shadow: 3px 1px 0 -2px $side, // adds depth
+								4px 2px 0 -2px $side,
+								0 4px 0 0 $front, // fills in gap from adding depth
+								4px 4px 0 -2px $side;
+		top: -20px;
+		
+		@media (#{$mainBreak}) {
+			top: -15px;
+		}
+		
+		.svg & {
+			background-image: url(../../style-imgs/waveTop.svg);
+			
+			@media (#{$mainBreak}) {
+				background-image: url(../../style-imgs/waveTopSmall.svg);
+			}
+		}
+		.no-svg & {
+			background-image: url(../../style-imgs/waveTop.png);
+			
+			@media (#{$mainBreak}) {
+				background-image: url(../../style-imgs/waveTopSmall.png);
+			}
+		}
+	}
+}
+
+.waveBottom {
+	margin-bottom: 31px;
+	padding: 26px 23px 14px 23px;
+	
+	transition-property: margin-bottom, padding;
+	transition-duration: $dur;
+	
+	@media (#{$mainBreak}) {
+		margin-bottom: 23px;
+		padding: 20px 17px 11px 17px;
+	}
+	
+	&:after {
+		bottom: -20px;
+		// fixes an empty space in the top right corner of :after (looks like bottom right of whole)
+		box-shadow: 0 -2px 0 0 $front,
+								10px -9px 0 -8px $side;
+		
+		.svg & {
+			background-image: url(../../style-imgs/waveBottom.svg);
+		}
+		
+		.no-svg & {
+			background-image: url(../../style-imgs/waveBottom.png);
+		}
+		
+		@media (#{$mainBreak}) {
+			bottom: -15px;
+	
+			transition-property: bottom, height;
+			transition-duration: $dur;
+			
+			.svg & {
+				background-image: url(../../style-imgs/waveBottomSmall.svg);
+			}
+		
+			.no-svg & {
+				background-image: url(../../style-imgs/waveBottomSmall.png);
+			}
+		}
+	}
+}
+
+#userSettings h1 {
+	@media (#{$mainBreak}) {
+		margin-top: -10px;
+		padding-left: 34px;
+	}
+}
+
+#userSettings h2 {
+	color: $headings;
+	font: 36px / 41px $headFont;
+	margin-left: -2px;
+		
+	transition-property: font-size, line-height;
+	transition-duration: $dur;
+	@media (#{$mainBreak}) {
+		font: 27px / 30px $headFont;
+		margin-left: -1px;
+	}
+}
+
+#userSettings .buttonWrap:not(.trashWrap) {
+	// save, edit, or create feed
+	margin-top: 11px;
+	
+	transition: margin-top $dur;
+	
+	@media (#{$mainBreak}) {
+		margin-top: 7px;
+	}
+}
+
+#userSettings input {
+	&[type="url"] {
+		margin-top: 13px;
+		max-width: 585px;
+		width: 100%;
+		
+		@media (#{$mainBreak}) {
+			margin-top: 8px;
+		}
+	}
+	
+	&[type="text"] {
+		margin-top: 9px;
+		
+		@media (#{$mainBreak}) {
+			margin-top: 6px;
+		}
+	}
+	
+	&[readonly] {
+		border: 0;
+		box-shadow: none;
+		color: $subHeadings;
+		margin-left: -1px;
+
+		text-indent: 0;
+		transition-duration: $dur;
+		
+		&[type="text"] {
+			margin-top: 1px;
+		}
+		
+		&[type="url"] {
+			margin-top: 0;
+		}
+	}
+}
+
+//______________nav_______________\\
+
+#settingsNav {
+	margin-left: 2px;
+	@media (#{$mainBreak}) {
+		padding-left: 34px;
+		margin-left: 1px;
+	}
+	a {
+		margin: 0 10px 0 0;
+		@media (#{$mainBreak}) {
+			margin: 0 8px 0 0;
+		}
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+}
+
+//______________log out_______________\\
+
+#logOutWrap .buttonWrap {
+	margin-top: 6px;
+	
+	@media (#{$mainBreak}) {
+		margin-top: 4px;
+	}
+}
+
+//______________add feeds_______________\\
+
+// input
+#newFeedTitle {
+	// first add feeds wrap
+	@media (#{$mainBreak}) {
+		margin-top: 5px;
+	}
+}
+
+#addFeedsWrap .error {
+	top: 7px;
+}
+
+//______________edit feeds_______________\\
+
+.feedInfo {
+	position: relative;
+	
+	&.canEdit {
+		height: 124px;
+		// background: yellow;
+		@media (#{$mainBreak}) {
+			height: 93px;
+		}
+		
+		&.first {
+			height: 99px;
+			@media (#{$mainBreak}) {
+				height: 75px;
+			}
+		}
+	}
+	
+	&.canSave {
+		height: 142px;
+		// background: yellow;
+		@media (#{$mainBreak}) {
+			height: 108px;
+		}
+		
+		&.first {
+			height: 117px;
+			@media (#{$mainBreak}) {
+				height: 89px;
+			}
+		}
+	}
+}
+
+#editFeedsWrap .hr {
+	left: -25px;
+	margin: 8px auto 15px auto;
+	
+	@media (#{$mainBreak}) {
+		left: -18px;
+		left: -1.8rem;
+		margin: 6px auto 12px auto;
+		margin: 0.6rem auto 1.2rem auto;
+	}
+	
+	&,
+	&:after,
+	&:before {
+		background: transparent;
+		border: 1px solid #ddd;
+		box-sizing: border-box;
+		height: 12px;
+		width: 12px;
+		@media (#{$mainBreak}) {
+			background: transparent;
+			border: 1px solid #ddd;
+			box-sizing: border-box;
+			height: 8px;
+			height: 0.8rem;
+			width: 8px;
+			width: 0.8rem;
+		}
+	}
+	
+	&:after,
+	&:before {
+		top: -1px;
+	}
+}
+
+#editFeedsWrap .canEdit.first .hr,
+#editFeedsWrap .canSave.first .hr {
+	height: 0;
+	margin: 0 auto;
+	opacity: 0;
+}
+
+
+#userSettings .canSave input[type="url"].existingFeedUrl {
+	margin-left: 0;
+	margin-top: 7px;
+	max-width: 585px;
+	width: 100%;
+	text-indent: 8px;
+	
+	@media (#{$mainBreak}) {
+		text-indent: 6px;
+	}
+}
+
+.feedInfo .error {
+	top: 7px;
+}
+
+#userSettings .trashWrap {
+	position: absolute;
+	right: 20px;
+	bottom: 1px;
+	@media (#{$mainBreak}) {
+		right: 1px;	
+	}
+}
+
+#userSettings .canEdit .trashWrap {
+	opacity: 0;
+	display: none;
+}
+
+.saveOrEditFeedWrap {
+	bottom: 1px;
+	position: absolute;
+	left: 0px;
+}
+
+.saveOrEditFeed {
+
+	&.save {
+		width: 69px;
+		@media (#{$mainBreak}) {
+			width: 51px;
+		}
+	}
+	&.edit {
+		width: 62px;
+		
+		@media (#{$mainBreak}) {
+			width: 46px;
+		}
+	}
+}
+
+//______________life span_______________\\
+
+#articleLifeSpanWrap > .info + .info {
+	margin-bottom: 42px;
+}
+
+#rangeStuff {
+	position: absolute;
+	left: 5px;
+	bottom: 0;
+	height: 60px;
+	width: 320px;
+	@media (#{$mainBreak}) {
+		width: 300px;
+		height: 40px;
+		bottom: 10px;
+	}
+}
+
+#range {
+	width: 200px;
+	height: 20px;
+	position: relative;
+
+}
+
+#rangePit {
+	width: 100%;
+	position: relative;
+	height: 14px;
+	border-width: 3px 0 1px 3px;
+	border-style: solid;
+	border-color: #f2f2f2 #f2f2f2 #f2f2f2 #e0e0e0;
+	top: 20px;
+	left: 20px;
+	background: #fafafa;
+	
+	@media (#{$mainBreak}) {
+		left: 12px;
+		top: 15px;
+	}
+	
+	&:after {
+		// masks the overflow of the knob
+		height: 14px;
+		background: #fafafa;
+		border-left: 1px solid #f2f2f2;
+		width: 10px;
+		top: -3px;
+		right: -10px;
+	}
+	
+	&:hover {
+		cursor: pointer;
+	}
+	
+	&:active {
+		cursor: -webkit-grabbing;
+		cursor: -moz-grabbing;
+		cursor: grabbing;
+	}
+}
+
+#rangeHandleWrap {
+	position: absolute;
+	left: 12px;
+	right: -4px;
+	height: 100%;
+}
+
+#rangeHandle {
+	width: 26px;
+	height: 22px;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-image: url(../../style-imgs/rangeKnob.svg);
+	top: -7px;
+	margin-left: -17px;
+	
+	&.position1 {
+		left: 0;
+	}
+	
+	&.position2 {
+		left: 25%;
+	}
+	
+	&.position3 {
+		left: 50%;
+	}
+	
+	&.position4 {
+		right: 25%;
+	}
+	
+	&.position5 {
+		right: 0;
+	}
+	
+	&:hover {
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+		cursor: grab;
+	}
+	
+	&:active {
+		cursor: -webkit-grabbing;
+		cursor: -moz-grabbing;
+		cursor: grabbing;
+	}
+}
+
+#rangeResultWrap {
+	position: absolute;
+	right: 0;
+	width: 80px;
+	top: 16px;
+	color: #1a1a1a;
+	font: 16px / 24px $bodyFont;
+	
+	@media (#{$mainBreak}) {
+		font-size: 12px;
+		line-height: 18px;
+		right: -2px;
+		top: 14px;
+	}
+}
+
+//______________background animation_______________\\
+
+#backgroundAnimationSettingWrap label {
+	margin-top: 1px;
+}
+
+//______________delete account_______________\\
+
+#deleteAccountWrap .buttonWrap {
+	// delete account
+	margin-top: 6px;
+	transition: margin-top $dur;
+	
+	@media (#{$mainBreak}) {
+		margin-top: 4px;
+	}
+}
+
+//______________footer_______________\\
+
+footer.toTop.waveTop {
+	// tag name added for weight
+	// see globals for defaults for .toTop
+	@media (#{$mainBreak}) {
+		margin-bottom: 0;
+	}
+}
+
+.toTopButton {
+	top: 15px;
+	transition: top $dur;
+
+	@media (#{$mainBreak}) {
+		top: 12px;
+	}
+}
+
+#userSettings .spacer {
+	height: 1px;
+}
+
+

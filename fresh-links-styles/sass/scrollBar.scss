@@ -1,0 +1,228 @@
+/**
+*
+*
+* style for the scrollbar plugin
+* http://manos.malihu.gr/jquery-custom-content-scroller/
+*/
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+BASIC STYLE  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCustomScrollbar {
+	-ms-touch-action: none;
+	touch-action: none; // MSPointer events - direct all pointer events to js
+}
+
+.mCustomScrollbar.mCS_no_scrollbar{
+	-ms-touch-action: auto;
+	touch-action: auto;
+}
+	
+.mCustomScrollBox{ // contains plugin's markup
+	direction: ltr;
+	height: 100%;
+	max-width: 100%;
+	position: relative;
+	outline: none;
+	overflow: hidden;
+}
+
+.mCSB_container{ // contains the original content
+	height: auto;
+	//overflow: hidden;
+	width: auto;
+}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+VERTICAL SCROLLBAR 
+y-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCSB_inside > .mCSB_container,
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+	margin-right: 20px;
+	@media (#{$mainBreak}) {
+		margin-right: 8px;
+	}
+}
+
+
+.mCSB_scrollTools { // contains scrollbar markup (draggable element, dragger rail, buttons etc.)
+	bottom: 0;
+	height: auto;
+	left: auto;
+	position: absolute;
+	right: -1px;
+	right: -0.1rem;
+	top: 0;
+	width: 20px;
+	width: 2rem;
+}
+
+.mCSB_outside + .mCSB_scrollTools { // scrollbar position: outside
+	right: -26px;
+	right: -2.6rem;
+}
+
+.mCSB_scrollTools .mCSB_draggerContainer { // contains the draggable element and dragger rail markup
+	bottom: 0;
+	height: auto;
+	left: 0;
+	position: absolute;
+	right: 0; 
+	top: 0;
+}
+
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+	margin: 20px 0;
+	margin: 2rem 0;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+	height: 100%;
+	margin: 0 auto;
+	width: 20px;
+	width: 2rem;
+}
+
+.mCSB_scrollTools .mCSB_dragger { // the draggable element
+	cursor: pointer;
+	// minimum dragger height
+	height: 80px;
+	height: 8rem;
+	width: 100%;
+	z-index: 1;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { // the dragger element
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 20px;
+	width: 2rem;
+}
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+TRANSITIONS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCSB_scrollTools, 
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	transition: opacity .2s ease-in-out,
+							background-color .2s ease-in-out;
+}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  --  THEME
+------------------------------------------------------------------------------------------------------------------------
+*/	
+
+/* default theme ("light") */
+
+.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
+	opacity: 0;
+}
+
+
+.mCustomScrollBox:hover > .mCSB_scrollTools,
+.mCustomScrollBox:hover ~ .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools,
+.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag { 
+	opacity: 1;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail{
+	
+}
+
+.svg .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background-image: url(../../style-imgs/scrollBar.svg);
+}
+
+.no-svg .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background-image: url(../../style-imgs/scrollBar.png);
+}
+
+@media (#{$mainBreak}) {
+	
+	/* 
+	------------------------------------------------------------------------------------------------------------------------
+	VERTICAL SCROLLBAR 
+	y-axis
+	------------------------------------------------------------------------------------------------------------------------
+	*/
+	
+	
+	.mCSB_scrollTools { // contains scrollbar markup (draggable element, dragger rail, buttons etc.)
+		// keep this wider to prevent cropping
+		width: 9px;
+		width: 0.9rem;
+		
+		top: 7px;
+		bottom: 7px;
+	}
+	
+	.mCSB_outside + .mCSB_scrollTools { // scrollbar position: outside
+
+	}
+	
+	.mCSB_scrollTools a + .mCSB_draggerContainer {
+		margin: 8px 0;
+		margin: 0.8rem 0;
+		
+	}
+	
+	.mCSB_scrollTools .mCSB_draggerRail {
+		width: 4px;
+		width: 0.4rem;
+		//border: 1px solid red;
+		position: relative;
+		//left: -1px;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger { // the draggable element
+		// minimum dragger height
+		height: 70px;
+		height: 7rem;
+		//position: relative;
+		//left: -1px;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { // the dragger element
+		width: 3px;
+		width: 0.3rem;
+	}
+	
+	/* 
+	------------------------------------------------------------------------------------------------------------------------
+	SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  --  THEME
+	------------------------------------------------------------------------------------------------------------------------
+	*/
+	
+	.svg .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+	.no-svg .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+		background: $front;
+		border-radius: 1px;
+	}
+}
+
+	
+
+

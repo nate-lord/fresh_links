@@ -1,0 +1,101 @@
+@import "compass/css3";
+
+::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input,
+button, {
+	margin: 0;
+	outline: 0;
+	vertical-align: middle;
+}
+
+button {
+	-webkit-appearance: none;
+	@include background-clip(padding-box);
+	@include border-radius(0);
+	background: none;
+	border: 0;
+	cursor: pointer;
+	font-size: 1em;
+	overflow: visible;
+	padding: 0;
+	width: auto;
+}
+
+input[type="password"],
+input[type="search"] {
+	@include box-sizing(border-box);
+	@include background-clip(padding-box);
+	background: none;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	text-align: left;
+	font-size: 1em;
+	height: 1.8em;
+}
+
+input {
+	outline: none;
+	@include border-radius(0);
+	-webkit-appearance: none;
+}
+
+:focus {
+	outline-color: transparent;
+	outline-style: none;
+}
+
+.thePost {
+	input,
+	button {
+		background-color: transparent !important;
+		backface-visibility: visible !important;
+		box-shadow: none  !important;
+		border-color: red !important;
+		border-radius: 3px !important;
+		border-style: solid !important;
+		color: $bodyText !important;
+		display: inline-block !important;
+		font-family: inherit !important;
+		font-size: inherit !important;
+		height: auto !important;
+		line-height: normal !important;
+		margin: 10px 0 !important;
+		padding: 5px 9px !important;
+		text-indent: 0 !important;
+		transition-duration: 0 !important;
+		transition-property: none !important;
+		vertical-align: middle !important;
+		
+		@media (#{$mainBreak}){
+			margin: 7px 0 !important;
+			padding: 4px 6px !important;
+		}
+		
+		&:after,
+		&:before {
+			display: none !important;
+		}
+	}
+
+	button,
+	.button,
+	input[type="reset"],
+	input[type="submit"],
+	input[type="button"],
+	input[type="search"] {
+		border-width: 1px 2px 2px 1px;
+		&:hover {
+			border-color: $interactive !important;
+			color: $interactive !important;
+		}
+	}
+	
+	input {
+		border-width: 2px 1px 1px 2px;
+	}
+}

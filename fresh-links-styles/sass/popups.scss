@@ -1,0 +1,338 @@
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+
+#popUps {
+	left: -200%;
+}
+
+#popUps,
+.popUpWrap {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.popUpWrap {
+	overflow: hidden;
+}
+
+// used as initial settings in trans. changed by js.
+.popUpWrap.onScreen {
+	left: 200%;
+	z-index: 100;
+}
+
+.popUpBox:before {
+	border-top: 3px solid $bottom;
+	border-top: 0.3rem solid $bottom;
+	border-left: 3px solid transparent;
+	border-left: 0.3rem solid transparent;
+	bottom: -3px;
+	bottom: -0.3rem;
+	box-sizing: content-box;
+	right: -3px;
+	right: -0.3rem;
+	width: 100%;
+}
+
+.popUpBox {
+	background: $front;
+	margin: 0 auto;
+	top: 50%;
+	padding: 15px 10px 8px 15px;
+	padding: 1.5rem 1rem 0.8rem 1.5rem;
+	position: relative;
+	width: 227px;
+	width: 22.7rem;
+	
+	transition-duration: 0.5s;
+	transition-property: width, padding, height, margin-top;
+}
+
+// used as initial settings in trans. changed by js.
+.onScreen > .popUpBox {
+	opacity: 0;
+	top: 42%;
+}
+
+.popUpBox:after {
+	background: $side;
+	height: 100%;
+	top: 2px;
+	top: 0.2rem;
+	transform: skewY(45deg);
+	right: -3px;
+	right: -0.3rem;
+	width: 3px;
+	width: 0.3rem;
+}
+
+
+#cancelFeedPopUp > .popUpBox,
+#deletePostPopUp > .popUpBox {
+	height: 229px;
+	height: 23.2rem;
+	margin-top: -116px;
+	margin-top: -11.6rem;
+}
+
+#deletePostsPopUp > .popUpBox,
+#deleteAccountPopUp > .popUpBox {
+	height: 259px;
+	height: 25.9rem;
+	margin-top: -130px;
+	margin-top: -13rem;
+}
+
+#denySignupTutorialPopUp > .popUpBox {
+	height: 216px;
+	height: 21.6rem;
+	margin-top: -108px;
+	margin-top: -10.8rem;
+}
+
+
+
+.no-js #jsIsDisabledPopUp,
+.oldIe #yourBrowserIsOldPopUp,
+.no-js.oldIe #jsIsDisabledPopUp {
+	// if browser is old & no js, show no js pop up
+	left: 200%;
+}
+
+#tourModePopUp > .popUpBox,
+#jsIsDisabledPopUp > .popUpBox {
+	height: 208px;
+	height: 20.8rem;
+	margin-top: -130px;
+	margin-top: -13rem;
+}
+
+.no-js #jsIsDisabledPopUp > .popUpBox,
+.oldIe #yourBrowserIsOldPopUp > .popUpBox,
+.no-js.oldIe #jsIsDisabledPopUp > .popUpBox {
+	opacity: 1 !important; // removes js-required trans
+	top: 50%;
+	z-index: 100;
+}
+
+
+#loginPopUp > .popUpBox,
+#signUpPopUp > .popUpBox {
+	height: 192px;
+	height: 19.2rem;
+	margin-top: -96px;
+	margin-top: -9.6rem;
+}
+
+#rssSearchPopUp > .popUpBox {
+	height: 242px;
+	height: 24.2rem;
+	margin-top: -121px;
+	margin-top: -12.1rem;
+}
+
+
+#yourBrowserIsOldPopUp > .popUpBox {
+	// see #jsIsDisabledPopUp above for grouped styles
+	height: 246px;
+	height: 24.6rem;
+	margin-top: -140px;
+	margin-top: -14rem;
+}
+
+.no-js.oldIe #yourBrowserIsOldPopUp {
+	left: -200%;
+}
+
+.popUpBox > p,
+.popUpBox > h1 {
+	margin-bottom: 8px;
+	margin-bottom: 0.8rem;
+	
+	transition: 0.5s height, margin-bottom;
+}
+
+.popUpBox > input[type="text"],
+.popUpBox > input[type="password"] {
+	margin: 0 0 16px 0;
+	margin: 0 0 1.6rem 0;
+	width: 195px;
+	width: 19.5rem;
+	
+	transition-duration: 0.5s;
+	transition-property: width, margin;
+}
+
+.popUpBox > label {
+	margin-bottom: 12px;
+	margin-bottom: 1.2rem;
+	
+	transition: margin-bottom 0.5s;
+}
+
+.popUpBox > .error {
+	position: relative;
+	top: -10px;
+}
+
+
+
+.popUpBox .buttonWrap {
+	bottom: 7px;
+	bottom: 0.7rem;
+	position: absolute;
+	
+	transition-duration: 0.5s;
+	transition-property: right, bottom;
+}
+
+#denySignupTutorialPopUp .buttonWrap,
+#popUps .popUpBox > .buttonWrap + .buttonWrap {
+	// id added for more weight
+	// adjusts all first buttons
+	right: 9px;
+	right: 0.9rem;
+}
+
+#cancelFeedPopUp .buttonWrap,
+#deletePostPopUp .buttonWrap,
+#deletePostsPopUp .buttonWrap,
+#deleteAccountPopUp .buttonWrap {
+	// adjusts all first buttons followed by a 'deny'
+	right: 86px;
+	right: 8.6rem;
+}
+
+#loginPopUp .buttonWrap,
+#signUpPopUp .buttonWrap,
+#rssSearchPopUp .buttonWrap {
+	// adjusts all first buttons followed by a 'cancel'
+	right: 100px;
+	right: 10rem;
+}
+
+
+@media (#{$mainBreak}) {
+	.popUpBox {
+		padding: 12px 7px 6px 12px;
+		padding: 1.2rem 0.7rem 0.6rem 1.2rem;
+		width: 170px;
+		width: 17rem;
+	}
+	
+	#cancelFeedPopUp > .popUpBox,
+	#deletePostPopUp > .popUpBox {
+		height: 178px;
+		height: 17.8rem;
+		margin-top: -89px;
+		margin-top: -8.9rem;
+	}
+	
+	#deletePostsPopUp > .popUpBox,
+	#deleteAccountPopUp > .popUpBox {
+		height: 196px;
+		height: 19.6rem;
+		margin-top: -98px;
+		margin-top: -9.8rem;
+	}
+	
+	#denySignupTutorialPopUp > .popUpBox {
+		height: 169px;
+		height: 16.9rem;
+		margin-top: -85px;
+		margin-top: -8.5rem;
+	}
+	
+
+	#tourModePopUp > .popUpBox,
+	#jsIsDisabledPopUp > .popUpBox {
+		height: 156px;
+		height: 15.6rem;
+		margin-top: -95px;
+		margin-top: -9.5rem;
+	}
+	
+	#loginPopUp > .popUpBox,
+	#signUpPopUp > .popUpBox {
+		height: 148px;
+		height: 14.8rem;
+		margin-top: -74px;
+		margin-top: -7.4rem;
+		//background: red;
+	}
+	
+	#rssSearchPopUp > .popUpBox {
+		height: 186px;
+		height: 18.6rem;
+		margin-top: -93px;
+		margin-top: -9.3rem;
+	}
+	
+	#yourBrowserIsOldPopUp > .popUpBox {
+		height: 184px;
+		height: 18.4rem;
+		margin-top: -110px;
+		margin-top: -11rem;
+	}
+	
+	.popUpBox > h1 {
+		margin-bottom: 6px;
+		margin-bottom: 0.6rem;
+	}
+	
+	.popUpBox > p {
+		margin-bottom: 7px;
+		margin-bottom: 0.7rem;
+	}
+	
+	.popUpBox > input[type="text"],
+	.popUpBox > input[type="password"] {
+		margin: 0 0 13px 0;
+		margin: 0 0 1.3rem 0;
+		width: 143px;
+		width: 14.3rem;
+	}
+	
+	.popUpBox > label {
+		margin-bottom: 8px;
+		margin-bottom: 0.8rem;
+	}
+	
+	.popUpBox > .buttonWrap {
+		bottom: 6px;
+		bottom: 0.6rem;
+	}
+	
+	#denySignupTutorialPopUp .buttonWrap,
+	.popUpBox > .buttonWrap + .buttonWrap {
+		right: 4px;
+		right: 0.4rem;
+	}
+	
+	#cancelFeedPopUp .buttonWrap,
+	#deletePostPopUp .buttonWrap,
+	#deletePostsPopUp .buttonWrap,
+	#deleteAccountPopUp .buttonWrap {
+		right: 65px;
+		right: 6.5rem;
+	}
+	
+	#loginPopUp .buttonWrap,
+	#signUpPopUp .buttonWrap,
+	#rssSearchPopUp .buttonWrap {
+		// adjusts all first buttons followed by a 'concel'
+		right: 77px;
+		right: 7.7rem;
+	}
+}

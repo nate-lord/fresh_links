@@ -1,0 +1,630 @@
+/**
+*
+*
+* properties listed AZ
+* the order goes from least specific to most specific:
+* tagnames -> classes -> IDs
+* tagnames, classes and IDS are grouped shortest -> longest and AZ within
+* tagnames, classes and IDS are listed AZ and
+* classes comment tagname
+* IDs comment [class/es &] tagname
+*/
+
+#homeNavWrap {
+	height: 0;
+	left: -48px;
+	left: -4.8rem;
+	margin: 0 auto;
+	max-width: 850px;
+	max-width: 85rem;
+	position: absolute;
+	top: 10px;
+	top: -1rem;
+	width: 100%;
+	z-index: 1;
+}
+
+#homeNav {
+	height: 22.6rem;
+	height: 226px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 40px;
+	width: 4rem;
+	
+}
+
+#homeNav > .buttonWrap {
+	// resets defaults
+	box-shadow: none;
+	display: block;
+	overflow: visible;
+	position: absolute;
+	//width: 100%;
+	
+}
+
+#homeNav .clicked > button {
+	transform: translate(5px, 5px);
+	
+	&:hover {
+		cursor: default;
+	}
+}
+
+#homeNav button {
+	// resets global defaults
+	border: none;
+	box-shadow: none;
+	line-height: normal;
+	padding: 0;
+	position: absolute;
+	text-align: left;
+	width: 32px;
+	width: 3.2rem;
+	
+	&:before {
+		background: $side;
+		border: none; // resets global defaults
+		border-bottom: 1px solid $side;
+		bottom: auto; // resets global defaults
+		box-sizing: content-box;
+		height: 100%;
+		left: auto; // resets global defaults
+		right: -8px;
+		right: -0.8rem;
+		top: 4px;
+		top: 0.4rem;
+		transform: skewY(45deg);
+		width: 8px;
+		width: 0.8rem;
+	}
+	
+	&:after {
+		background: $bottom;
+		border: none; // resets global defaults
+		bottom: -8px;
+		bottom: -0.8rem;
+		height: 8px;
+		height: 0.8rem;
+		left: 4px;
+		left: 0.4rem;
+		right: auto; // resets global defaults
+		top: auto; // resets global defaults
+		transform: skewX(45deg);
+		width: 100%;
+	}
+}
+
+#homeNav #faqButton,
+#homeNav #newFeedsButton,
+#homeNav #settingsButton,
+#homeNav #savedPostsButton {
+	@media (#{$mainBreak}) {
+		padding: 0;
+	}
+}
+
+#hideMenuButtonWrap {
+	display: none !important;
+}
+
+
+#newFeedsButtonWrap {
+	height: 82px;
+	
+	@media (#{$mainBreak}) {
+		width: 54px;
+	}
+}
+
+#newFeedsButton {
+	border-top-left-radius: 12px;
+	height: 74px;
+	
+	@media (#{$mainBreak}) {
+		border-radius: 0;
+	}
+}
+
+#newButtonImage {
+	background: url(../../style-imgs/new.svg) 50% 15px no-repeat;
+	color: transparent;
+	display: block;
+	height: 100%;
+	.no-svg & {
+		background-image: url(../../style-imgs/new.png);
+	}
+	@media (#{$mainBreak}) {
+		background-image: url(../../style-imgs/newSmall.svg);
+		background-position: 6px 50%;
+		.no-svg & {
+			background-image: url(../../style-imgs/newSmall.png);
+		}
+	}
+}
+
+
+
+#savedPostsButtonWrap {
+	height: 44px;
+	top: 74px;
+	
+	@media (#{$mainBreak}) {
+		width: 33px;
+	}
+}
+
+#savedPostsButton {
+	height: 36px;
+}
+
+#savedButtonImage {
+	background: url(../../style-imgs/saved.svg) 50% 50% no-repeat;
+	color: transparent;
+	display: block;
+	height: 100%;
+	.no-svg & {
+		background-image: url(../../style-imgs/saved.png);
+	}
+	
+	@media (#{$mainBreak}) {
+		background-image: url(../../style-imgs/savedSmall.svg);
+		background-position: 4px 2px;
+		.no-svg & {
+			background-image: url(../../style-imgs/savedSmall.png);
+		}
+	}
+}
+
+
+
+#faqButtonWrap {
+	height: 60px;
+	top: 110px;
+	
+	@media (#{$mainBreak}) {
+		width: 47px;
+	}
+}
+
+#faqButton {
+	height: 52px;
+}
+
+#faqButtonImage {
+	background: url(../../style-imgs/info.svg) 7px 50% no-repeat;
+	color: transparent;
+	display: block;
+	height: 100%;
+	.no-svg & {
+		background-image: url(../../style-imgs/info.png);
+	}
+	
+	@media (#{$mainBreak}) {
+		background-image: url(../../style-imgs/infoSmall.svg);
+		background-position: 6px 50%;
+		.no-svg & {
+			background-image: url(../../style-imgs/infoSmall.png);
+		}
+	}
+	
+}
+
+
+
+#settingsButtonWrap {
+	height: 40px;
+	top: 162px;
+	
+	@media (#{$mainBreak}) {
+		width: 34px;
+	}	
+}
+
+#settingsButton {
+	border-bottom-left-radius: 12px;
+	height: 40px;
+	
+	@media (#{$mainBreak}) {
+		border-radius: 0;
+	}
+}
+
+#settingsButtonWrap > #settingsButton:after {
+  bottom: -8px;
+  height: 12px;
+	left: auto;
+  right: -2px;
+  width: 26px;
+	z-index: -10000;
+}
+
+.safari #settingsButtonWrap > #settingsButton:before {
+	border-bottom: none;
+}
+
+.safari #settingsButtonWrap > #settingsButton:after {
+	border-right: 1px solid $bottom;
+}
+
+#settingsButtonImage {
+	background: url(../../style-imgs/navSettings.svg) 50% 0 no-repeat;
+	color: transparent;
+	display: block;
+	height: 30px;
+	.no-svg & {
+		background-image: url(../../style-imgs/navSettings.png);
+	}
+	
+	@media (#{$mainBreak}) {
+		background-position: 4px 2px;
+		background-image: url(../../style-imgs/navSettingsSmall.svg);
+		
+		.no-svg & {
+			background-image: url(../../style-imgs/navSettingsSmall.png);
+		}
+	}
+}
+
+#settingsButtonImage + .style {
+	background: $front;
+	border-bottom-left-radius: 12px;
+	bottom: 0;
+	height: 10px;
+	position: absolute;
+	width: 32px;
+	z-index: 100;
+	@media (#{$mainBreak}) {
+		display: none;
+	}
+}
+
+
+
+
+
+
+#homeNavWrap .close {
+	display: none;
+}
+
+#gateWrap {
+	height: 18px;
+	height: 1.8rem;
+	margin: 0 auto;
+	max-width: 850px;
+	max-width: 85rem;
+	position: absolute;
+	top: -10px;
+	top: -1rem;
+	width: 100%;
+	z-index: 2;
+}
+
+#gate:before {
+	// right nub, right face
+	background: $side;
+	height: 8px;
+	height: 0.8rem;
+	right: -8px;
+	right: -0.8rem;
+	top: 4px;
+	top: 0.4rem;
+	transform: skewY(45deg);
+	width: 8px;
+	width: 0.8rem;
+}
+
+#gate {
+	background: $front;
+	border-bottom: 2px solid $bottom;
+	border-bottom: 0.2rem solid $bottom;
+	height: 10px;
+	height: 1rem;
+	left: -16px;
+	left: -1.6rem;
+	position: absolute;
+	right: 8px;
+	right: 0.8rem;
+}
+
+#gate:after {
+	// right nub, front face
+	background: $bottom;
+	bottom: -8px;
+	bottom: -0.8rem;
+	height: 8px;
+	height: 0.8rem;
+	right: -4px;
+	right: -0.4rem;
+	transform: skewX(45deg);
+	width: 16px;
+	width: 1.6rem;
+}
+
+#gate + .style:after,
+#gate + .style:before {
+	height: 0;
+	width: 0;
+}
+/*
+ *	the left nub is made of three css half square triangles.
+ *	the first two are the same color making a parrellagram
+ *	the last is darker and under the gate
+ */
+#gate + .style:before {
+	// left most of the 3 triangles
+	border-left: 8px solid transparent;
+	border-left: 0.8rem solid transparent;
+	border-top: 8px solid $bottom;
+	border-top: 0.8rem solid $bottom;
+	left: -8px;
+	left: -0.8rem;
+}
+
+#gate + .style {
+	// center of the 3 triangles
+	background: $bottom;
+	bottom: 0;
+	height: 8px;
+	height: 0.8rem;
+	left: -8px;
+	left: -0.8rem;
+	position: absolute;
+	width: 8px;
+	width: 0.8rem;
+}
+
+#gate + .style:after {
+	// right most of the 3 triangles
+	border-left: 8 solid transparent;
+	border-left: 0.8rem solid transparent;
+	border-top: 8px solid $side;
+	border-top: 0.8rem solid $side;
+	right: 0;
+}
+
+@media (#{$mainBreak}) {
+	
+	#homeNavWrap {
+		background: $front;
+		border: 3px solid $bottom;
+		border: 0.3rem solid $bottom;
+		border-bottom-right-radius: 30px;
+		border-bottom-right-radius: 3rem;
+		border-left-width: 0;
+		border-top-width: 0 !important;
+		height: 165px;
+		height: 16.5rem;
+		left: -132px;
+		left: -13.2rem;
+		max-width: 132px;
+		max-width: 13.2rem;
+		position: absolute;
+		top: 0;
+		transition: transform 0.5s;
+		width: 100%;
+		z-index: 200;
+	}
+	
+	.csstransitions {
+		#homeNavWrap.offScreen {
+			transform: translateX(0);
+		}
+	
+		#homeNavWrap.onScreen {
+			transform: translateX(132px);
+			transform: translateX(13.2rem);
+		}
+	}
+	
+	.no-csstransitions {
+		#homeNavWrap.offScreen {
+			left: -132px;
+			left: -13.2rem;
+		}
+	
+		#homeNavWrap.onScreen {
+			left: 0;
+		}
+	}
+	
+	#homeNav {
+		bottom: 0;
+		height: auto;
+		left: 55px;
+		left: 5.5rem;
+		position: absolute;
+		top: 7px;
+		top: 0.7rem;
+		width: 54px;
+		width: 5.4rem;
+	}
+	
+	#homeNav > .buttonWrap:before {
+		border-bottom: 30px solid $side;
+		border-bottom: 3rem solid $side;
+		border-right: 30px solid transparent;
+		border-right: 3rem solid transparent;
+		height: 0;
+		width: 0;
+	}
+	
+	#homeNav > .buttonWrap {
+		background: $bottom;
+		display: block;
+		float: right;
+		height: 30px;
+		height: 3rem;
+		margin-bottom: 6px;
+		margin-bottom: 0.6rem;
+		overflow: hidden;
+		position: relative;
+		top: auto;
+	}
+	
+	#homeNav > .buttonWrap:hover > *,
+	#homeNav > .buttonWrap.clicked > * {
+		transform: translate(4px, 4px);
+		transform: translate(0.4rem, 0.4rem);
+	}
+	
+	#homeNav button:before,
+	.safari #settingsButtonWrap > #settingsButton:before {
+		background: transparent;
+		border-bottom: 3px solid $front;
+		border-bottom: 0.3rem solid $front;
+		border-right: 3px solid transparent;
+		border-right: 0.3rem solid transparent;
+		bottom: -3px;
+		bottom: -0.3rem;
+		left: 0;
+	}
+	
+	#homeNav button {
+		border-bottom: 3px solid $bottom;
+		border-bottom: 0.3rem solid $bottom;
+		border-right: 3px solid $side;
+		border-right: 0.3rem solid $side;
+		box-shadow: inset 1px 1px 0px 1px #f4f4f4;
+		height: 30px !important;
+		height: 3rem !important;
+		line-height: 22px;
+		line-height: 2.2rem;
+		padding: 2px 7px;
+		padding: 0.2rem 0.7rem;
+		position: relative;
+		text-align: left;
+		width: 100%;
+	}
+
+	#homeNav button:after,
+	#settingsButtonWrap > #settingsButton:after,
+	.safari #settingsButtonWrap > #settingsButton:after {
+		background: transparent;
+		border-left: 3px solid transparent;
+		border-left: 0.3rem solid transparent;
+		border-top: 3px solid $front;
+		border-top: 0.3rem solid $front;
+		height: 0 !important;
+		left: auto;
+		position: absolute;
+		right: -3px;
+		top: 0;
+		transform: skewX(0);
+		width: 0 !important;
+	}
+	
+	#homeNavWrap > .close {
+		border-radius: 0;
+		bottom: 7px;
+		bottom: 0.7rem;
+		display: block;
+		height: auto;
+		left: 2px;
+		left: 0.2rem;
+		position: absolute;
+		top: 9px;
+		top: 0.9rem;
+		width: 50px;
+		width: 5rem;
+	}
+	
+	#homeNavWrap .closeButton {
+		height: 100%;
+	}
+	
+	#gateWrap,
+	#gateWrap:after,
+	#gateWrap:before {
+		background-position: bottom right;
+		pointer-events: none;
+	}
+	
+	#gateWrap:before {
+		bottom: 30px;
+		bottom: 3rem;
+		right: 0;
+		top: 0;
+		width: 10px;
+		width: 1rem;
+	}
+	
+	#gateWrap {
+		background-repeat: no-repeat;
+		height: 173px;
+		height: 17.3rem;
+		left: -140px;
+		left: -14rem;
+		max-width: 140px;
+		max-width: 14rem;
+		top: 0;
+		transition: transform 0.5s;
+		width: 100%;
+		z-index: 100;
+	}
+	
+	.csstransitions {
+		.offScreen + #gateWrap {
+			transform: translateX(0);
+		}
+	
+		.onScreen + #gateWrap {
+			transform: translateX(140px);
+			transform: translateX(14rem);
+		}
+	}
+	
+	.no-csstransitions {
+		.offScreen + #gateWrap {
+			left: -140px;
+			left: -14rem;
+		}
+	
+		.onScreen + #gateWrap {
+			left: 0;
+		}
+	}
+
+	
+	#gateWrap:after {
+		bottom: 0;
+		height: 10px;
+		height: 1rem;
+		left: 0;
+		right: 30px;
+		right: 3rem;
+	}
+	
+	.svg {
+		
+		#gateWrap {
+			background-image: url(../../style-imgs/smallNavCornerDots.svg);
+		}
+		
+		#gateWrap:after,
+		#gateWrap:before {
+			background-image: url(../../style-imgs/greyDotSmall.svg);
+		}
+	}
+	
+	.no-svg {
+		#gateWrap {
+			background-image: url(../../style-imgs/smallNavCornerDots.png);
+		}
+		
+		#gateWrap:after,
+		#gateWrap:before {
+			background-image: url(../../style-imgs/greyDotSmall.png);
+		}
+		
+	}
+	
+	#gate,
+	#gateWrap > .style {
+		display: none;
+	}
+	
+}

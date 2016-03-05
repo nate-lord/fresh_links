@@ -1,0 +1,117 @@
+#infoHeader {
+	display: none;
+	@media (#{$mainBreak}){
+		display: block;
+		background: $front;
+		height: 45px;
+		margin-left: 8px;
+		margin: 5px 0 15px 8px;
+		width: 140px;
+		box-shadow: 1px 1px 0 0 $bottom;
+	}
+}
+#infoHeader > h1 {
+	margin-left: 60px;
+	line-height: 45px;
+}
+
+#infoSection {
+	padding-bottom: 10px;
+}
+
+#infoSection .postThumbWrap {
+	@media (#{$mainBreak}){
+		display: none;
+	}
+}
+
+#infoSection .postThumb {
+	background-size: 39px 57px;
+	
+	@media (#{$mainBreak}){
+		display: none;
+	}
+}
+
+#infoSection .postTitle {
+	margin: 0 0 0 100px;
+	max-width: 500px;
+	width: 100%;
+	padding: 5px 110px 0 0;
+	position: relative;
+	height: 91px;
+	display: table;
+	@media (#{$mainBreak}){
+		height: 70px;
+		margin-left: 0;
+		max-width: 100%;
+		padding: 0;
+	}
+}
+
+#infoSection .expandableButton {
+	color: #444;
+	display: table-cell; 
+	min-height: 91px;
+	font: 3.6rem/4.1rem $headFont;
+	transition-duration: 0.2s;
+	transition-property: color;
+	vertical-align: middle;
+	
+	&:hover {
+		border-bottom-color: transparent;
+		color: $interactive;
+	}
+	
+	&:active {
+		background: transparent;
+	}
+	
+	@media (#{$mainBreak}){
+		font: 2.7rem/3rem $headFont;
+		min-height: 71px;
+		padding: 15px
+	}
+}
+
+#infoSection .expandableContentWrap {
+	background: $front;
+	border-radius: 0 0 12px 12px;
+	width: calc(100% - 2px);
+}
+
+#infoSection .expandableContent {
+	margin-top: 0;
+}
+
+#infoSection .expandableContent > * {
+	max-width: 650px;
+	margin: 0 auto;
+	
+	& + * {
+		margin-top: 15px;
+		@media (#{$mainBreak}) {
+			margin-top: 10px;
+		}
+	}
+}
+
+#infoSection .expandableContent input {
+	position: relative;
+	top: -10px;
+	margin-right: 10px;
+}
+
+.safari #infoSection form {
+	margin-top: 30px;
+	
+	@media (#{$mainBreak}) {
+		margin-top: 20px;
+	}
+}
+
+.safari #infoSection form .buttonWrap {
+	//opacity: 0.2;
+	// position: relative;
+	top: -10px;
+}

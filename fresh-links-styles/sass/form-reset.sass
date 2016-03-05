@@ -1,0 +1,105 @@
+@import compass/css3
+
+::-moz-focus-inner
+	border: 0
+	padding: 0
+
+input,
+button,
+select,
+textarea
+	margin: 0
+	outline: 0
+	vertical-align: middle
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"]
+	-webkit-appearance: none
+	+background-clip(padding-box)
+	+border-radius(0)
+	background: none
+	border: 0
+	cursor: pointer
+	font-size: 1em
+	overflow: visible
+	padding: 0
+	width: auto
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"]
+	+box-sizing(border-box)
+	+background-clip(padding-box)
+	+border-radius(0)
+	-webkit-appearance: none
+	background: none
+	border: 0
+	outline: 0
+	padding: 0
+	text-align: left
+	font-size: 1em
+	height: 1.8em
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled]
+	-moz-user-select: -moz-none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	user-select: none
+	cursor: default
+
+\:invalid
+	// Suppress red glow that Firefox
+	// adds to form fields by default,
+	// even when user is still typing.
+	+box-shadow(none)
+
+textarea,
+select[size],
+select[multiple]
+	height: auto
+
+// Tweaks for Safari + Chrome.
+@media (-webkit-min-device-pixel-ratio: 0)
+	select,
+	select[size="0"],
+	select[size="1"]
+		height: 1.8em
+
+textarea
+	min-height: 40px
+	overflow: auto
+	resize: none
+	width: 100%
+
+optgroup
+	font-style: normal
+	font-weight: normal
+	// Font family repeated, for Firefox.
+	font-family: inherit
+	
+textarea,
+input
+	outline: none
+
+\:focus
+	outline-color: transparent
+	outline-style: none
